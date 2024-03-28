@@ -1,0 +1,521 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="rgb(255,255,255)" />
+  
+  <title>CPP特点-输出长度与精度控制-指针与常量 &middot; House of Eternity</title>
+    <meta name="title" content="CPP特点-输出长度与精度控制-指针与常量 &middot; House of Eternity" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.022d0ebc3b46a335eb1c7ef79b7f2de143d7cd5156d433638592ef1ce5f8554e.js"
+    integrity="sha256-Ai0OvDtGozXrHH73m38t4UPXzVFW1DNjhZLvHOX4VU4="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.8cd4199ad423a763e2dd42a32c20643d8eb472bc550188be85b60444140826dd.css"
+    integrity="sha256-jNQZmtQjp2Pi3UKjLCBkPY60crxVAYi&#43;hbYERBQIJt0="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      2024年cpp课堂学习笔记
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/cpp%E7%89%B9%E7%82%B9-%E8%BE%93%E5%87%BA%E9%95%BF%E5%BA%A6%E4%B8%8E%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6-%E6%8C%87%E9%92%88%E4%B8%8E%E5%B8%B8%E9%87%8F/" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="CPP特点-输出长度与精度控制-指针与常量" />
+<meta property="og:description" content="2024年cpp课堂学习笔记" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/cpp%E7%89%B9%E7%82%B9-%E8%BE%93%E5%87%BA%E9%95%BF%E5%BA%A6%E4%B8%8E%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6-%E6%8C%87%E9%92%88%E4%B8%8E%E5%B8%B8%E9%87%8F/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-03-28T19:50:14+08:00" />
+<meta property="article:modified_time" content="2024-03-28T19:50:14+08:00" />
+
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="CPP特点-输出长度与精度控制-指针与常量"/>
+<meta name="twitter:description" content="2024年cpp课堂学习笔记"/>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "CPP特点-输出长度与精度控制-指针与常量",
+    "headline": "CPP特点-输出长度与精度控制-指针与常量",
+    "description": "2024年cpp课堂学习笔记",
+    "abstract": "面向对象语言特点 # 抽象 类 -\u0026gt; 抽象 对象 -\u0026gt; 具体 封装 成员变量(私) 成员函数(公) 继承 多态 cpp向下兼容c语言 #cpp中不允许\/**\/嵌套使用 #cout\u0026lt;\u0026lt;_LINE_\u0026lt;\u0026lt;~~; # 显示该语句位于源程序第几行 通常只有规模很小(一般为1~5条语句)而频繁使用函数才定义为内联函数 #输出长度与精度控制 ##include \u0026lt;iomainip\u0026gt; \/\/std::setw\rcout\u0026lt;\u0026lt;setw(10);限制输出长度为10\rcout\u0026lt;\u0026lt;setprecision(5)\u0026lt;\u0026lt;~;\/\/限制输出精度\rcout\u0026lt;\u0026lt;fixed;\/\/用定点数表示法表示浮点数 cpp中函数可以重载.",
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/cpp%E7%89%B9%E7%82%B9-%E8%BE%93%E5%87%BA%E9%95%BF%E5%BA%A6%E4%B8%8E%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6-%E6%8C%87%E9%92%88%E4%B8%8E%E5%B8%B8%E9%87%8F\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Emiya-Omega"
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-03-28T19:50:14\u002b08:00",
+    "datePublished": "2024-03-28T19:50:14\u002b08:00",
+    
+    "dateModified": "2024-03-28T19:50:14\u002b08:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "62"
+  }
+  </script>
+
+
+  
+  <meta name="author" content="Emiya-Omega" />
+  
+    
+      <link href="https://github.com/emiya-omega" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 print:hidden sm:py-10 dark:text-neutral">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >House of Eternity</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >note</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/categories/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Categories</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="https://github.com/emiya-omega"
+                  title=""
+                  target="_blank"
+                  >
+                    <span
+                      class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                    ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/tags/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+            
+              
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        CPP特点-输出长度与精度控制-指针与常量
+      </h1>
+      
+        <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-03-28 19:50:14 &#43;0800 CST">28 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="面向对象语言特点" class="relative group">面向对象语言特点 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e8%af%ad%e8%a8%80%e7%89%b9%e7%82%b9" aria-label="Anchor">#</a></span></h2><ul>
+<li>抽象</li>
+</ul>
+<ol>
+<li>类 -&gt; 抽象</li>
+<li>对象 -&gt; 具体</li>
+</ol>
+<ul>
+<li>封装</li>
+</ul>
+<ol>
+<li>成员变量(私)</li>
+<li>成员函数(公)</li>
+</ol>
+<ul>
+<li>继承</li>
+<li>多态</li>
+</ul>
+<h4 id="cpp向下兼容c语言" class="relative group">cpp向下兼容c语言 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cpp%e5%90%91%e4%b8%8b%e5%85%bc%e5%ae%b9c%e8%af%ad%e8%a8%80" aria-label="Anchor">#</a></span></h4><h4 id="cpp中不允许嵌套使用" class="relative group">cpp中不允许/**/嵌套使用 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cpp%e4%b8%ad%e4%b8%8d%e5%85%81%e8%ae%b8%e5%b5%8c%e5%a5%97%e4%bd%bf%e7%94%a8" aria-label="Anchor">#</a></span></h4><h4 id="cout_line_" class="relative group"><code>cout&lt;&lt;_LINE_&lt;&lt;~~;</code> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cout_line_" aria-label="Anchor">#</a></span></h4><ul>
+<li>显示该语句位于源程序第几行</li>
+</ul>
+<h4 id="通常只有规模很小一般为15条语句而频繁使用函数才定义为内联函数" class="relative group">通常只有规模很小(一般为1~5条语句)而频繁使用函数才定义为内联函数 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e9%80%9a%e5%b8%b8%e5%8f%aa%e6%9c%89%e8%a7%84%e6%a8%a1%e5%be%88%e5%b0%8f%e4%b8%80%e8%88%ac%e4%b8%ba15%e6%9d%a1%e8%af%ad%e5%8f%a5%e8%80%8c%e9%a2%91%e7%b9%81%e4%bd%bf%e7%94%a8%e5%87%bd%e6%95%b0%e6%89%8d%e5%ae%9a%e4%b9%89%e4%b8%ba%e5%86%85%e8%81%94%e5%87%bd%e6%95%b0" aria-label="Anchor">#</a></span></h4><h3 id="输出长度与精度控制" class="relative group">输出长度与精度控制 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e8%be%93%e5%87%ba%e9%95%bf%e5%ba%a6%e4%b8%8e%e7%b2%be%e5%ba%a6%e6%8e%a7%e5%88%b6" aria-label="Anchor">#</a></span></h3><pre tabindex="0"><code>#include &lt;iomainip&gt; //std::setw
+cout&lt;&lt;setw(10);限制输出长度为10
+cout&lt;&lt;setprecision(5)&lt;&lt;~;//限制输出精度
+cout&lt;&lt;fixed;//用定点数表示法表示浮点数
+</code></pre><h4 id="cpp中函数可以重载只要函数参数的类型不同or参数的个数不同或者二者兼而有之两个or两个以上的函数可以使用相同的函数名" class="relative group">cpp中函数可以重载.只要函数参数的类型不同,or参数的个数不同,或者二者兼而有之,两个or两个以上的函数可以使用相同的函数名 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cpp%e4%b8%ad%e5%87%bd%e6%95%b0%e5%8f%af%e4%bb%a5%e9%87%8d%e8%bd%bd%e5%8f%aa%e8%a6%81%e5%87%bd%e6%95%b0%e5%8f%82%e6%95%b0%e7%9a%84%e7%b1%bb%e5%9e%8b%e4%b8%8d%e5%90%8cor%e5%8f%82%e6%95%b0%e7%9a%84%e4%b8%aa%e6%95%b0%e4%b8%8d%e5%90%8c%e6%88%96%e8%80%85%e4%ba%8c%e8%80%85%e5%85%bc%e8%80%8c%e6%9c%89%e4%b9%8b%e4%b8%a4%e4%b8%aaor%e4%b8%a4%e4%b8%aa%e4%bb%a5%e4%b8%8a%e7%9a%84%e5%87%bd%e6%95%b0%e5%8f%af%e4%bb%a5%e4%bd%bf%e7%94%a8%e7%9b%b8%e5%90%8c%e7%9a%84%e5%87%bd%e6%95%b0%e5%90%8d" aria-label="Anchor">#</a></span></h4><h4 id="指向常量的指针" class="relative group">指向常量的指针 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%8c%87%e5%90%91%e5%b8%b8%e9%87%8f%e7%9a%84%e6%8c%87%e9%92%88" aria-label="Anchor">#</a></span></h4><p><code>const char *name =&quot;chen&quot;;</code></p>
+<ol>
+<li>*name 是常量(name不允许改变)
+<code>name[3]='a' ;</code> is ERROR</li>
+<li>name是指向常量的指针变量(指针name本身可以改变)
+<code>name =&quot;zhang&quot;;</code> is RIGHT</li>
+</ol>
+<h4 id="指向字符串的常指针" class="relative group">指向字符串的常指针 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%8c%87%e5%90%91%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%9a%84%e5%b8%b8%e6%8c%87%e9%92%88" aria-label="Anchor">#</a></span></h4><p><code>char* const name =&quot;chen&quot;;</code></p>
+<ol>
+<li>name是常量(name不允许改变)</li>
+<li>指针的地址不允许改变
+<code>name = &quot;zhang&quot;</code> is ERROR</li>
+</ol>
+<h4 id="指向常量的常指针" class="relative group">指向常量的常指针 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%8c%87%e5%90%91%e5%b8%b8%e9%87%8f%e7%9a%84%e5%b8%b8%e6%8c%87%e9%92%88" aria-label="Anchor">#</a></span></h4><p><code>const char* const name =&quot;chen&quot;;</code></p>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="727"
+        height="727"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="Emiya-Omega"
+        loading="lazy" decoding="async"
+        
+          src="/img/author_huf294376f29f32ff44aa134c85d2c1372_66085_660x0_resize_q75_box.jpg"
+          srcset="/img/author_huf294376f29f32ff44aa134c85d2c1372_66085_330x0_resize_q75_box.jpg 330w,/img/author_huf294376f29f32ff44aa134c85d2c1372_66085_660x0_resize_q75_box.jpg 660w
+          
+            ,/img/author.jpg 727w
+          
+          
+            ,/img/author.jpg 727w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          Emiya-Omega
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">A little bit about me</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/emiya-omega"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="/posts/1/%E9%80%97%E5%8F%B7%E8%AF%AD%E5%8F%A5%E6%89%A7%E8%A1%8C-%E9%BB%98%E8%AE%A4%E5%80%BC%E7%9B%B8%E5%85%B3/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >逗号语句执行 默认值相关</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-03-28 20:20:59 &#43;0800 CST">28 March 2024</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+      </main><footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2024
+            Emiya-Omega
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>
