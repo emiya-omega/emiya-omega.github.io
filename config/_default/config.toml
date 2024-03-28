@@ -21,4 +21,4 @@ links = [
   home = ["HTML", "RSS", "JSON"]
 
 [params]
-  mainSections =['posts' , 'cpp' ]
+  mainSections =['posts' , 'CPP' ]
