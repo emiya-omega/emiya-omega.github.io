@@ -5,6 +5,7 @@ fearured: true
 categories: ["学习笔记"]
 date: 2024-03-28T19:50:14+08:00
 sort_by: Name # Exif.Date
+tags: ["CPP"]
 sort_order: desc
 title: CPP特点-输出长度与精度控制-指针与常量
 #type 
