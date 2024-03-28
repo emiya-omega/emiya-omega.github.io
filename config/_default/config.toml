@@ -11,7 +11,7 @@ summaryLength = 0
 
 [params.author]
 name = "Emiya-Omega"
-#image = "img/author.jpg"
+image = "img/author.jpg"
 headline = "A noob"
 bio = "A little bit about me"
 links = [
