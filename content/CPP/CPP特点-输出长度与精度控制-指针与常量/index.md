@@ -2,6 +2,7 @@
 description: 2024年cpp课堂学习笔记 
 featured_image: images/zhuanzhuan.jpg 
 fearured: true
+categories: ["学习笔记"]
 date: 2024-03-28T19:50:14+08:00
 sort_by: Name # Exif.Date
 sort_order: desc
