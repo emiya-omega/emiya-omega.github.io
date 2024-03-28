@@ -1,0 +1,23 @@
+# -- Site Configuration --
+# Refer to the theme docs for more details about each of these parameters.
+# https://jpanther.github.io/congo/docs/getting-started/
+
+baseURL = "https://emiya-omega.github.io/"
+defaultContentLanguage = "en"
+title = "House of Eternity"
+enableRobotsTXT = true
+paginate = 10
+summaryLength = 0
+
+[params.author]
+name = "Emiya-Omega"
+#image = "img/author.jpg"
+headline = "A noob"
+bio = "A little bit about me"
+links = [
+  { github = "https://github.com/emiya-omega" }
+]
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+#title = "House of Eternity"

@@ -1,0 +1,19 @@
+baseURL = 'http://emiya-omega.github.io/'
+#languageCode = 'en-us'
+title = 'House of Eternity'
+theme = 'gallery'
+copyright = "© Emiya Omega"
+defaultContentLanguage = "en"
+disableKinds = ["taxonomy", "term"]
+enableRobotsTXT = true
+languageCode = "en"
+timeZone = "Asia/Shanghai"
+timeout = "120s"
+#title = "Gallery"
+
+[params]
+  defaultTheme = "dark"
+  description = "Emiya-Omega 's Blog'"
+  #title = "House of Eternity"
+  title = "Emiya-Omega"
+  
