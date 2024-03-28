@@ -6,21 +6,14 @@
     <description>Recent content in Posts on House of Eternity</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Mar 2024 20:18:42 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>http://localhost:1313/posts/1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/1/</guid>
-      <description>面向对象语言特点 # 抽象 类 -&amp;gt; 抽象 对象 -&amp;gt; 具体 封装 成员变量(私) 成员函数(公) 继承 多态 cpp向下兼容c语言 #cpp中不允许/**/嵌套使用 #cout&amp;lt;&amp;lt;_LINE_&amp;lt;&amp;lt;~~; # 显示该语句位于源程序第几行 通常只有规模很小(一般为1~5条语句)而频繁使用函数才定义为内联函数 #输出长度与精度控制 ##include &amp;lt;iomainip&amp;gt; //std::setw&#xD;cout&amp;lt;&amp;lt;setw(10);限制输出长度为10&#xD;cout&amp;lt;&amp;lt;setprecision(5)&amp;lt;&amp;lt;~;//限制输出精度&#xD;cout&amp;lt;&amp;lt;fixed;//用定点数表示法表示浮点数 cpp中函数可以重载.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2/</guid>
-      <description>逗号语句执行 #printf(&amp;quot;%d&amp;quot;,(int a=3*5,a*4,a+5));</description>
+      <title>About</title>
+      <link>http://localhost:1313/posts/test/test/</link>
+      <pubDate>Wed, 27 Mar 2024 20:18:42 +0800</pubDate>
+      <guid>http://localhost:1313/posts/test/test/</guid>
+      <description>本博客由22年部署现迁移至github+hugo # 原地址：https://emiya-omega.</description>
     </item>
   </channel>
 </rss>

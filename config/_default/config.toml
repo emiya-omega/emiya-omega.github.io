@@ -12,7 +12,7 @@ summaryLength = 0
 [params.author]
 name = "Emiya-Omega"
 image = "img/author.jpg"
-headline = "A noob"
+headline = "Such a noob"
 bio = "A little bit about me"
 links = [
   { github = "https://github.com/emiya-omega" }
