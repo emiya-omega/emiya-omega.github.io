@@ -18,6 +18,7 @@ links = [
   { github = "https://github.com/emiya-omega" }
 ]
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON", "MD"]
 
-#title = "House of Eternity"
+[params]
+  mainSections =['posts' , 'cpp' ]
