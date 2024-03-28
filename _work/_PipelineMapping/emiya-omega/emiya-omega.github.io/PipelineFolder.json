@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "emiya-omega/emiya-omega.github.io",
+  "pipelineDirectory": "emiya-omega.github.io",
+  "workspaceDirectory": "emiya-omega.github.io\\emiya-omega.github.io",
+  "repositories": {
+    "emiya-omega/emiya-omega.github.io": {
+      "repositoryPath": "emiya-omega.github.io\\emiya-omega.github.io",
+      "lastRunOn": "03/27/2024 21:18:44 +08:00"
+    }
+  },
+  "lastRunOn": "03/27/2024 21:18:44 +08:00"
+}

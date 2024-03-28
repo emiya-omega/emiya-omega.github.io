@@ -1,0 +1,168 @@
+[2024-03-27 13:09:42Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2024-03-27 13:09:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\bigwe\myblog\bin'
+[2024-03-27 13:09:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\bigwe\myblog'
+[2024-03-27 13:09:42Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\bigwe\myblog\.credentials'
+[2024-03-27 13:09:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\bigwe\myblog\bin'
+[2024-03-27 13:09:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\bigwe\myblog'
+[2024-03-27 13:09:42Z INFO HostContext] Well known config file 'Runner': 'C:\Users\bigwe\myblog\.runner'
+[2024-03-27 13:09:43Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2024-03-27 13:09:43Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.22631.
+[2024-03-27 13:09:43Z INFO Listener] Version: 2.314.1
+[2024-03-27 13:09:43Z INFO Listener] Commit: 976290d966e6cc3e748a49bf8fdbe139ff764201
+[2024-03-27 13:09:43Z INFO Listener] Culture: zh-CN
+[2024-03-27 13:09:43Z INFO Listener] UI Culture: zh-CN
+[2024-03-27 13:09:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\bigwe\myblog\bin'
+[2024-03-27 13:09:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\bigwe\myblog'
+[2024-03-27 13:09:43Z INFO Listener] Validating directory permissions for: 'C:\Users\bigwe\myblog'
+[2024-03-27 13:09:43Z INFO CommandLineParser] Parse
+[2024-03-27 13:09:43Z INFO CommandLineParser] Parsing 1 args
+[2024-03-27 13:09:43Z INFO CommandLineParser] parsing argument
+[2024-03-27 13:09:43Z INFO CommandLineParser] HasArgs: False
+[2024-03-27 13:09:43Z INFO CommandLineParser] Adding Command: run
+[2024-03-27 13:09:43Z INFO Listener] Arguments parsed
+[2024-03-27 13:09:43Z INFO Runner] ExecuteCommand
+[2024-03-27 13:09:43Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\bigwe\myblog\bin\Runner.Listener.dll
+[2024-03-27 13:09:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\bigwe\myblog\bin'
+[2024-03-27 13:09:43Z INFO ConfigurationStore] binPath: C:\Users\bigwe\myblog\bin
+[2024-03-27 13:09:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\bigwe\myblog\bin'
+[2024-03-27 13:09:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\bigwe\myblog'
+[2024-03-27 13:09:43Z INFO ConfigurationStore] RootFolder: C:\Users\bigwe\myblog
+[2024-03-27 13:09:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\bigwe\myblog\bin'
+[2024-03-27 13:09:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\bigwe\myblog'
+[2024-03-27 13:09:43Z INFO HostContext] Well known config file 'Runner': 'C:\Users\bigwe\myblog\.runner'
+[2024-03-27 13:09:43Z INFO ConfigurationStore] ConfigFilePath: C:\Users\bigwe\myblog\.runner
+[2024-03-27 13:09:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\bigwe\myblog\bin'
+[2024-03-27 13:09:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\bigwe\myblog'
+[2024-03-27 13:09:43Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\bigwe\myblog\.credentials'
+[2024-03-27 13:09:43Z INFO ConfigurationStore] CredFilePath: C:\Users\bigwe\myblog\.credentials
+[2024-03-27 13:09:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\bigwe\myblog\bin'
+[2024-03-27 13:09:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\bigwe\myblog'
+[2024-03-27 13:09:43Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\bigwe\myblog\.credentials_migrated'
+[2024-03-27 13:09:43Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\bigwe\myblog\.credentials_migrated
+[2024-03-27 13:09:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\bigwe\myblog\bin'
+[2024-03-27 13:09:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\bigwe\myblog'
+[2024-03-27 13:09:43Z INFO HostContext] Well known config file 'Service': 'C:\Users\bigwe\myblog\.service'
+[2024-03-27 13:09:43Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\bigwe\myblog\.service
+[2024-03-27 13:09:43Z INFO CommandSettings] Flag 'help': 'False'
+[2024-03-27 13:09:43Z INFO CommandSettings] Flag 'version': 'False'
+[2024-03-27 13:09:43Z INFO CommandSettings] Flag 'commit': 'False'
+[2024-03-27 13:09:43Z INFO CommandSettings] Flag 'check': 'False'
+[2024-03-27 13:09:43Z INFO CommandSettings] Command 'configure': 'False'
+[2024-03-27 13:09:43Z INFO CommandSettings] Command 'remove': 'False'
+[2024-03-27 13:09:43Z INFO CommandSettings] Command 'warmup': 'False'
+[2024-03-27 13:09:43Z INFO ConfigurationManager] LoadSettings
+[2024-03-27 13:09:43Z INFO ConfigurationStore] IsConfigured()
+[2024-03-27 13:09:43Z INFO ConfigurationStore] IsConfigured: True
+[2024-03-27 13:09:43Z INFO ConfigurationManager] Is configured: True
+[2024-03-27 13:09:43Z INFO ConfigurationStore] Read setting file: 319 chars
+[2024-03-27 13:09:43Z INFO ConfigurationManager] Settings Loaded
+[2024-03-27 13:09:43Z INFO ConfigurationStore] IsServiceConfigured()
+[2024-03-27 13:09:43Z INFO ConfigurationStore] IsServiceConfigured: False
+[2024-03-27 13:09:43Z INFO CommandSettings] Command 'run': 'True'
+[2024-03-27 13:09:43Z INFO ConfigurationStore] IsConfigured()
+[2024-03-27 13:09:43Z INFO ConfigurationStore] IsConfigured: True
+[2024-03-27 13:09:43Z INFO ConfigurationManager] Is configured: True
+[2024-03-27 13:09:43Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2024-03-27 13:09:43Z INFO Runner] Set runner startup type - Manual
+[2024-03-27 13:09:43Z INFO CommandSettings] Flag 'once': 'False'
+[2024-03-27 13:09:43Z INFO CommandSettings] Flag 'once': 'False'
+[2024-03-27 13:09:43Z INFO Runner] RunAsync
+[2024-03-27 13:09:43Z INFO ConfigurationManager] LoadSettings
+[2024-03-27 13:09:43Z INFO ConfigurationStore] IsConfigured()
+[2024-03-27 13:09:43Z INFO ConfigurationStore] IsConfigured: True
+[2024-03-27 13:09:43Z INFO ConfigurationManager] Is configured: True
+[2024-03-27 13:09:43Z INFO ConfigurationManager] Settings Loaded
+[2024-03-27 13:09:43Z INFO MessageListener] {
+  "AgentId": 2,
+  "AgentName": "MASTERSPARK",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelinesghubeus13.actions.githubusercontent.com/LGPFQ5YSvheL61PUz41Lz2GybwNbpAhX6mmnFhu5AvXAZaATR1/",
+  "GitHubUrl": "https://github.com/emiya-omega/emiya-omega.github.io",
+  "WorkFolder": "_work"
+}
+[2024-03-27 13:09:43Z INFO MessageListener] Loading Credentials
+[2024-03-27 13:09:43Z INFO ConfigurationStore] HasCredentials()
+[2024-03-27 13:09:43Z INFO ConfigurationStore] stored True
+[2024-03-27 13:09:43Z INFO CredentialManager] GetCredentialProvider
+[2024-03-27 13:09:43Z INFO CredentialManager] Creating type OAuth
+[2024-03-27 13:09:43Z INFO CredentialManager] Creating credential type: OAuth
+[2024-03-27 13:09:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\bigwe\myblog\bin'
+[2024-03-27 13:09:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\bigwe\myblog'
+[2024-03-27 13:09:43Z INFO HostContext] Well known config file 'RSACredentials': 'C:\Users\bigwe\myblog\.credentials_rsaparams'
+[2024-03-27 13:09:43Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\bigwe\myblog\.credentials_rsaparams
+[2024-03-27 13:09:43Z INFO MessageListener] Attempt to create session.
+[2024-03-27 13:09:43Z INFO MessageListener] Connecting to the Runner Server...
+[2024-03-27 13:09:43Z INFO RunnerServer] EstablishVssConnection
+[2024-03-27 13:09:43Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2024-03-27 13:09:43Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-03-27 13:09:43Z INFO RunnerServer] EstablishVssConnection
+[2024-03-27 13:09:43Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2024-03-27 13:09:43Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-03-27 13:09:43Z INFO RunnerServer] EstablishVssConnection
+[2024-03-27 13:09:43Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2024-03-27 13:09:43Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-03-27 13:09:44Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-03-27 13:09:44Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-03-27 13:09:44Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-03-27 13:09:44Z INFO MessageListener] VssConnection created
+[2024-03-27 13:09:44Z INFO Terminal] WRITE LINE: 
+[2024-03-27 13:09:44Z INFO Terminal] WRITE LINE: 
+[2024-03-27 13:09:44Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\bigwe\myblog\.credentials_rsaparams
+[2024-03-27 13:09:44Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\bigwe\myblog\.credentials_rsaparams
+[2024-03-27 13:09:45Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2024-03-27 13:09:45Z INFO MessageListener] Session created.
+[2024-03-27 13:09:45Z INFO Terminal] WRITE LINE: Current runner version: '2.314.1'
+[2024-03-27 13:09:45Z INFO Terminal] WRITE LINE: 2024-03-27 13:09:45Z: Listening for Jobs
+[2024-03-27 13:09:45Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2024-03-27 13:18:41Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\bigwe\myblog\.credentials_rsaparams
+[2024-03-27 13:18:41Z INFO MessageListener] Message '1' received from session '579a0cd7-2383-4fb8-9b4d-b5d5d2370849'.
+[2024-03-27 13:18:41Z INFO Runner] Received job message of length 31327 from service, with hash '093a647f5358d8721ad553019abaea761a00576f130b151a35710ff8e12ed6d9'
+[2024-03-27 13:18:41Z INFO JobDispatcher] Job request 2 for plan ae2f1332-dcf7-409c-a8d1-8750a0540bb5 job ca395085-040a-526b-2ce8-bdc85f692774 received.
+[2024-03-27 13:18:41Z INFO JobDispatcher] Pull OrchestrationId ae2f1332-dcf7-409c-a8d1-8750a0540bb5.build.__default from JWT claims
+[2024-03-27 13:18:41Z INFO MessageListener] Received job status event. JobState: Busy
+[2024-03-27 13:18:41Z INFO MessageListener] _getMessagesTokenSource is already disposed.
+[2024-03-27 13:18:41Z INFO Terminal] WRITE LINE: 2024-03-27 13:18:41Z: Running job: build
+[2024-03-27 13:18:41Z INFO JobDispatcher] Start renew job request 2 for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2024-03-27 13:18:42Z INFO JobDispatcher] Successfully renew job request 2, job is valid till 2024/3/27 13:28:43
+[2024-03-27 13:18:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\bigwe\myblog\bin'
+[2024-03-27 13:18:42Z INFO ProcessInvokerWrapper] Starting process:
+[2024-03-27 13:18:42Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\bigwe\myblog\bin\Runner.Worker.exe'
+[2024-03-27 13:18:42Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 1620 1560'
+[2024-03-27 13:18:42Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\bigwe\myblog\bin'
+[2024-03-27 13:18:42Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-03-27 13:18:42Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-03-27 13:18:42Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2024-03-27 13:18:42Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-03-27 13:18:42Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2024-03-27 13:18:42Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-03-27 13:18:42Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2024-03-27 13:18:42Z INFO ProcessInvokerWrapper] Process started with process id 64732, waiting for process exit.
+[2024-03-27 13:18:42Z INFO JobDispatcher] Send job request message to worker for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2024-03-27 13:18:42Z INFO ProcessChannel] Sending message of length 31327, with hash '093a647f5358d8721ad553019abaea761a00576f130b151a35710ff8e12ed6d9'
+[2024-03-27 13:18:42Z INFO JobNotification] Entering JobStarted Notification
+[2024-03-27 13:18:42Z INFO JobNotification] Entering StartMonitor
+[2024-03-27 13:19:05Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-03-27 13:19:05Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-03-27 13:19:05Z INFO ProcessInvokerWrapper] Finished process 64732 with exit code 102, and elapsed time 00:00:22.5072788.
+[2024-03-27 13:19:05Z INFO JobDispatcher] Worker finished for job ca395085-040a-526b-2ce8-bdc85f692774. Code: 102
+[2024-03-27 13:19:05Z INFO JobDispatcher] finish job request for job ca395085-040a-526b-2ce8-bdc85f692774 with result: Failed
+[2024-03-27 13:19:05Z INFO Terminal] WRITE LINE: 2024-03-27 13:19:05Z: Job build completed with result: Failed
+[2024-03-27 13:19:05Z INFO JobDispatcher] Stop renew job request for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2024-03-27 13:19:05Z INFO JobDispatcher] job renew has been cancelled, stop renew job request 2.
+[2024-03-27 13:19:05Z INFO JobNotification] Entering JobCompleted Notification
+[2024-03-27 13:19:05Z INFO JobNotification] Entering EndMonitor
+[2024-03-27 13:19:05Z INFO MessageListener] Received job status event. JobState: Online
+[2024-03-27 13:19:05Z WARN GitHubActionsService] GET request to https://pipelinesghubeus13.actions.githubusercontent.com/LGPFQ5YSvheL61PUz41Lz2GybwNbpAhX6mmnFhu5AvXAZaATR1/_apis/distributedtask/pools/1/messages?sessionId=579a0cd7-2383-4fb8-9b4d-b5d5d2370849&lastMessageId=1&status=Busy&runnerVersion=2.314.1&os=Windows&architecture=X64&disableUpdate=false has been cancelled.
+[2024-03-27 13:19:05Z INFO MessageListener] Get messages has been cancelled using local token source. Continue to get messages with new status.
+[2024-03-27 13:19:59Z INFO Terminal] WRITE LINE: Exiting...
+[2024-03-27 13:19:59Z INFO ConfigurationStore] IsServiceConfigured()
+[2024-03-27 13:19:59Z INFO ConfigurationStore] IsServiceConfigured: False
+[2024-03-27 13:19:59Z INFO HostContext] Runner will be shutdown for UserCancelled
+[2024-03-27 13:19:59Z WARN GitHubActionsService] GET request to https://pipelinesghubeus13.actions.githubusercontent.com/LGPFQ5YSvheL61PUz41Lz2GybwNbpAhX6mmnFhu5AvXAZaATR1/_apis/distributedtask/pools/1/messages?sessionId=579a0cd7-2383-4fb8-9b4d-b5d5d2370849&lastMessageId=1&status=Online&runnerVersion=2.314.1&os=Windows&architecture=X64&disableUpdate=false has been cancelled.
+[2024-03-27 13:19:59Z INFO MessageListener] Get next message has been cancelled.
+[2024-03-27 13:19:59Z INFO JobDispatcher] Shutting down JobDispatcher. Make sure all WorkerDispatcher has finished.
+[2024-03-27 13:19:59Z INFO JobDispatcher] Ensure WorkerDispatcher for job ca395085-040a-526b-2ce8-bdc85f692774 run to finish, cancel any running job.
+[2024-03-27 13:19:59Z INFO JobDispatcher] Job request ca395085-040a-526b-2ce8-bdc85f692774 processed succeed.
+[2024-03-27 13:19:59Z INFO Runner] Deleting Runner Session...
+[2024-03-27 13:19:59Z INFO Listener] Runner execution been cancelled.
