@@ -6,7 +6,7 @@
     <description>Recent content in CPP on House of Eternity</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 28 Mar 2024 20:20:59 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 29 Mar 2024 08:28:56 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CPP特点-输出长度与精度控制-指针与常量</title>
@@ -14,6 +14,13 @@
       <pubDate>Thu, 28 Mar 2024 19:50:14 +0800</pubDate>
       <guid>http://localhost:1313/cpp/cpp%E7%89%B9%E7%82%B9-%E8%BE%93%E5%87%BA%E9%95%BF%E5%BA%A6%E4%B8%8E%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6-%E6%8C%87%E9%92%88%E4%B8%8E%E5%B8%B8%E9%87%8F/</guid>
       <description>面向对象语言特点 # 抽象 类 -&amp;gt; 抽象 对象 -&amp;gt; 具体 封装 成员变量(私) 成员函数(公) 继承 多态 cpp向下兼容c语言 #cpp中不允许/**/嵌套使用 #cout&amp;lt;&amp;lt;_LINE_&amp;lt;&amp;lt;~~; # 显示该语句位于源程序第几行 通常只有规模很小(一般为1~5条语句)而频繁使用函数才定义为内联函数 #输出长度与精度控制 ##include &amp;lt;iomainip&amp;gt; //std::setw cout&amp;lt;&amp;lt;setw(10);限制输出长度为10 cout&amp;lt;&amp;lt;setprecision(5)&amp;lt;&amp;lt;~;//限制输出精度 cout&amp;lt;&amp;lt;fixed;//用定点数表示法表示浮点数 cpp中函数可以重载.</description>
+    </item>
+    <item>
+      <title>作用域运算符-联合-强转-内存动态分配-引用</title>
+      <link>http://localhost:1313/cpp/2/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD/</link>
+      <pubDate>Fri, 29 Mar 2024 08:28:56 +0800</pubDate>
+      <guid>http://localhost:1313/cpp/2/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD/</guid>
+      <description>作用域运算符:: #说明 # 如果两个变量同名,一个全局的,一个局部的,那么局部变量在其作用域内具有较高的优先级 联合 #声明 #union data { int i; double d; }x; 访问时 x.</description>
     </item>
     <item>
       <title>逗号语句执行-默认值相关-函数重载</title>
