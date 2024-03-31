@@ -19,7 +19,7 @@ fingerprintAlgorithm = "sha256"
 
 [header]
   layout = "basic" # valid options: basic, hamburger, hybrid, custom
-  # logo = "img/logo.jpg"
+  logo = "img/logo.png"
   # logoDark = "img/dark-logo.jpg"
   showTitle = true
 
@@ -33,6 +33,7 @@ fingerprintAlgorithm = "sha256"
   layout = "custom" # valid options: page, profile, custom
   showRecent = true
   recentLimit = 5
+  
 
 [article]
   showDate = true
