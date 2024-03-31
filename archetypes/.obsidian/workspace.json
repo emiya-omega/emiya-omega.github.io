@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8723adc2e144d825",
+        "id": "ae2f988e0d50b1d1",
         "type": "tabs",
         "children": [
           {
-            "id": "fc04c76711123395",
+            "id": "6aaaf278dfad0e6a",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -139,8 +139,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "fc04c76711123395",
+  "active": "6aaaf278dfad0e6a",
   "lastOpenFiles": [
+    "2024-03-31.md",
     "default.md",
     "未命名.md",
     "未命名"

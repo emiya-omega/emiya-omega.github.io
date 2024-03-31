@@ -20,7 +20,7 @@
       <link>http://localhost:1313/cpp/2/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD/</link>
       <pubDate>Fri, 29 Mar 2024 08:28:56 +0800</pubDate>
       <guid>http://localhost:1313/cpp/2/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD/</guid>
-      <description>作用域运算符:: #说明 # 如果两个变量同名,一个全局的,一个局部的,那么局部变量在其作用域内具有较高的优先级 联合 #声明 #union data&#xD;{&#xD;int i;&#xD;double d;&#xD;}x; 访问时 x.</description>
+      <description>k## 作用域运算符::</description>
     </item>
     <item>
       <title>逗号语句执行-默认值相关-函数重载</title>

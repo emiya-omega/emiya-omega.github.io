@@ -1,0 +1,10 @@
+{
+	"id": "hugo-publish",
+	"name": "Hugo Publish",
+	"version": "1.0.4",
+	"minAppVersion": "0.15.0",
+	"description": "Publish your blog to hugo site.",
+	"author": "kirito",
+	"authorUrl": "https://www.kirito.info",
+	"isDesktopOnly": true
+}

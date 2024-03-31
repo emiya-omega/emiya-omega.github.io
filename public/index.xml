@@ -20,7 +20,7 @@
       <link>http://localhost:1313/cpp/2/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD/</link>
       <pubDate>Fri, 29 Mar 2024 08:28:56 +0800</pubDate>
       <guid>http://localhost:1313/cpp/2/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD/</guid>
-      <description>作用域运算符:: #说明 # 如果两个变量同名,一个全局的,一个局部的,那么局部变量在其作用域内具有较高的优先级 联合 #声明 #union data&#xD;{&#xD;int i;&#xD;double d;&#xD;}x; 访问时 x.</description>
+      <description>k## 作用域运算符::</description>
     </item>
     <item>
       <title>逗号语句执行-默认值相关-函数重载</title>
@@ -35,6 +35,13 @@
       <pubDate>Wed, 27 Mar 2024 20:18:42 +0800</pubDate>
       <guid>http://localhost:1313/posts/test/test/</guid>
       <description>本博客由22年部署现迁移至github+hugo # 原地址：https://emiya-omega.</description>
+    </item>
+    <item>
+      <title> replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title</title>
+      <link>http://localhost:1313/cpp/3/%E6%9C%AA%E5%91%BD%E5%90%8D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/cpp/3/%E6%9C%AA%E5%91%BD%E5%90%8D/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

@@ -61,4 +61,18 @@
   
     
   
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/cpp/3/%E6%9C%AA%E5%91%BD%E5%90%8D/</loc>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/posts/%E6%9C%AA%E5%91%BD%E5%90%8D/</loc>
+          </url>
+    
+  
 </urlset>
