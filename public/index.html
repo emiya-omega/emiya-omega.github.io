@@ -373,7 +373,7 @@
     
   </div>
 
-
+ 
     </div>
   </header>
   <section class="prose dark:prose-invert"></section>
@@ -444,7 +444,53 @@
   
 
 </section>
+<section>
+    <!DOCTYPE html>
+<html>
 
+<head>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+</head>
+
+<body>
+    <div class="demo">
+        <div id="player1">
+        </div>
+    </div>
+    <script>
+        var ap = new APlayer
+            ({
+                element: document.getElementById('player1'),
+                fixed: true,
+                autoplay: true,
+                mini: true,
+                theme: '#f8f4fc',
+                loop: 'all',
+                order: 'random',
+                preload: 'auto',
+                volume: 0.05,
+                mutex: true,
+                listFolded: true,
+                listMaxHeight: '500px',
+                lrcType: 0,
+                music: [
+                    {
+                        name: 'ヴォヤージュ1969',
+                        artist: 'ZUN',
+                        url: 'https://upload.thwiki.cc/2/2d/th08_13.mp3',
+                        cover: 'https://upload.thwiki.cc/f/fb/%E9%98%BF%E6%B3%A2%E7%BD%9711.jpg'
+                    }
+                ]
+            });
+        
+    </script>
+</body>
+
+  </section>
   
 
         
