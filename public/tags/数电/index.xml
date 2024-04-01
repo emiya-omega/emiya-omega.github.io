@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>数电 on House of Eternity</title>
-    <link>http://localhost:41409/tags/%E6%95%B0%E7%94%B5/</link>
+    <link>http://localhost:1313/tags/%E6%95%B0%E7%94%B5/</link>
     <description>Recent content in 数电 on House of Eternity</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 01 Apr 2024 08:32:01 +0800</lastBuildDate>
-    <atom:link href="http://localhost:41409/tags/%E6%95%B0%E7%94%B5/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E6%95%B0%E7%94%B5/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>逻辑代数公式及最简表达式</title>
-      <link>http://localhost:41409/cpp/3/</link>
+      <link>http://localhost:1313/cpp/3/</link>
       <pubDate>Mon, 01 Apr 2024 08:32:01 +0800</pubDate>
-      <guid>http://localhost:41409/cpp/3/</guid>
+      <guid>http://localhost:1313/cpp/3/</guid>
       <description>逻辑代数公式 # 分配律 \(A\cdot(B+C)=A\cdot B+A\cdot C\) \(A+B \cdot C=(A+B)\cdot(A+C)\) 同一律 \(A\cdot A=A\) \( A+A=A \) 德摩根定理 \(\overline{A\cdot B}=\overline{A}+\overline{B}\) \(\overline{A+B}=\overline{A}\cdot \overline{B}\) 还原律 \(\overline{\overline{A}}=A\) 若干常用公式 \(A\cdot B+A\cdot \overline{B}=A\) \(A+A\cdot B=A\) \(A+\overline{A}\cdot B=A+B\) \(A\cdot B+\overline{A}\cdot C+B\cdot C=A\cdot B+\overline{A}\cdot C\) 逻辑函数的最简表达式 #最简与或式 # 定义: 乘积项的个数最少,每个乘积项中相乘的变量个数也最少的与或表达式,称为最简与或式 最简与非-与非式 # 定义: 非号个数最少,每个非号下面相乘的变量个数也最少的与非-与非式,称为最简与非-与非式 求法: 在最简与或表达式的基础上,两次取反,再用德摩根定理去掉下面的反号,便可得到 最简或与式 # 定义: 括号个数最少,每个括号中相加的变量的个数也最少的或与式,称为最简或与式 求法: 在反函数最简与或式的基础上,取反,再用德摩根定理去掉反号,便可得到函数的最简或与式 最简或非-或非式 # 定义:非号个数最少,每个非号下面相加的变量个数也最少的或非-或非式,称为最简或非-或非表达式 求法:在最简或与表达式的基础上,两次取反,再用德摩根定理去掉下面的反号,所得到的便是函数的最简或非-或非表达式 最简与或非表达式 # 定义:在非号下面相加的乘积项个数最少,每个乘积项中相乘的变量个数也最少的与或非式,称为最简与或非表达式 求法:在最简或非-或非式的基础上,用德摩根定理去掉大反号下面的小反号,便可得到函数的最简与或非表达式 逻辑函数表示方法 #真值表 # 把变量的各种可能取值与相应的函数值,以表格形式一一列举出来.</description>
     </item>
   </channel>

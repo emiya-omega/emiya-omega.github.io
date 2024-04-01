@@ -7,4 +7,8 @@ tags:
   - 介绍
 ---
 ## 本博客由22年部署现迁移至github+hugo
-- 原地址：https://emiya-omega.gitlab.io
+~~原地址：https://emiya-omega.gitlab.io~~
+{{< alert >}}
+**警告!** 本博客不针对移动端进行页面优化!
+{{< /alert >}}
+
