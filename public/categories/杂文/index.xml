@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>杂文 on House of Eternity</title>
-    <link>http://localhost:1313/categories/%E6%9D%82%E6%96%87/</link>
+    <link>http://localhost:41409/categories/%E6%9D%82%E6%96%87/</link>
     <description>Recent content in 杂文 on House of Eternity</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 27 Mar 2024 20:18:42 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/%E6%9D%82%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:41409/categories/%E6%9D%82%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>http://localhost:1313/posts/test/test/</link>
+      <link>http://localhost:41409/posts/test/test/</link>
       <pubDate>Wed, 27 Mar 2024 20:18:42 +0800</pubDate>
-      <guid>http://localhost:1313/posts/test/test/</guid>
+      <guid>http://localhost:41409/posts/test/test/</guid>
       <description>本博客由22年部署现迁移至github+hugo # 原地址：https://emiya-omega.</description>
     </item>
   </channel>
