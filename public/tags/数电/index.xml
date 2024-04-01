@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数电 on House of Eternity</title>
+    <link>http://localhost:1313/tags/%E6%95%B0%E7%94%B5/</link>
+    <description>Recent content in 数电 on House of Eternity</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Apr 2024 08:32:01 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%95%B0%E7%94%B5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3</title>
+      <link>http://localhost:1313/cpp/3/</link>
+      <pubDate>Mon, 01 Apr 2024 08:32:01 +0800</pubDate>
+      <guid>http://localhost:1313/cpp/3/</guid>
+      <description>逻辑代数公式 # 分配律 % $$ A\cdot(B+C)=A\cdotB+A\cdotC $$</description>
+    </item>
+  </channel>
+</rss>

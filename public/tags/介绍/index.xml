@@ -15,19 +15,5 @@
       <guid>http://localhost:1313/posts/test/test/</guid>
       <description>本博客由22年部署现迁移至github+hugo # 原地址：https://emiya-omega.</description>
     </item>
-    <item>
-      <title> replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title</title>
-      <link>http://localhost:1313/cpp/3/%E6%9C%AA%E5%91%BD%E5%90%8D/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/cpp/3/%E6%9C%AA%E5%91%BD%E5%90%8D/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>{{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }}</title>
-      <link>http://localhost:1313/posts/%E6%9C%AA%E5%91%BD%E5%90%8D/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/%E6%9C%AA%E5%91%BD%E5%90%8D/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>
