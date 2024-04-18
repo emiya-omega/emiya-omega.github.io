@@ -4,7 +4,7 @@
     <title>介绍 on House of Eternity</title>
     <link>http://localhost:1313/tags/%E4%BB%8B%E7%BB%8D/</link>
     <description>Recent content in 介绍 on House of Eternity</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo 0.125.0</generator>
     <language>en</language>
     <lastBuildDate>Wed, 27 Mar 2024 20:18:42 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E4%BB%8B%E7%BB%8D/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>http://localhost:1313/posts/test/test/</link>
       <pubDate>Wed, 27 Mar 2024 20:18:42 +0800</pubDate>
       <guid>http://localhost:1313/posts/test/test/</guid>
-      <description>本博客由22年部署现迁移至github+hugo #~~ 原地址：https://emiya-omega.</description>
+      <description>本博客由22年部署现迁移至github+hugo #原地址：https://emiya-omega.</description>
     </item>
   </channel>
 </rss>
