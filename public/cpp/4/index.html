@@ -17,8 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="rgb(255,255,255)" />
   
-  <title>构造函数－成员列表－析构函数 &middot; House of Eternity</title>
-    <meta name="title" content="构造函数－成员列表－析构函数 &middot; House of Eternity" />
+  <title>构造函数－成员列表－析构函数－对象数组和对象指针 &middot; House of Eternity</title>
+    <meta name="title" content="构造函数－成员列表－析构函数－对象数组和对象指针 &middot; House of Eternity" />
   
   
   
@@ -96,7 +96,7 @@
   
   <meta property="og:url" content="http://localhost:1313/cpp/4/">
   <meta property="og:site_name" content="House of Eternity">
-  <meta property="og:title" content="构造函数－成员列表－析构函数">
+  <meta property="og:title" content="构造函数－成员列表－析构函数－对象数组和对象指针">
   <meta property="og:description" content="类的构造函数和析构函数 #构造函数 # 构造函数的名字必须与类名相同，且不能有返回参数 class Complex{ Private: double real; double imag; Public: Complex(double r,double i) {real=r;imag=i;} }; 定义对象时，编译系统会自动调用构造函数~~（初始化）~~ 与普通成员函数一样，可以定义在体内也可以定义在体外 构造函数的主要作用是对对象进行初始化 构造函数一般声明为公有成员，但不能像其他成员一样被显式调用它在定义对象的同时被调用，且只调用一次 在实际应用中有通常要为每一个类定义构造函数 构造函数可以不带参数 构造函数可以重载 用成员初始化列表对数据成员初始化 # 一般表达形式 类名::构造函数名([参数表])[:(成员初始化列表)] {//构造函数体} 成员初始化列表一般形式 数据成员1(初始值1),数据成员2(初始值2),&amp;hellip;.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -105,7 +105,7 @@
     <meta property="article:modified_time" content="2024-04-18T16:06:55+00:00">
     <meta property="article:tag" content="CPP">
 
-  <meta name="twitter:card" content="summary"><meta name="twitter:title" content="构造函数－成员列表－析构函数">
+  <meta name="twitter:card" content="summary"><meta name="twitter:title" content="构造函数－成员列表－析构函数－对象数组和对象指针">
 <meta name="twitter:description" content="类的构造函数和析构函数 #构造函数 # 构造函数的名字必须与类名相同，且不能有返回参数 class Complex{ Private: double real; double imag; Public: Complex(double r,double i) {real=r;imag=i;} }; 定义对象时，编译系统会自动调用构造函数~~（初始化）~~ 与普通成员函数一样，可以定义在体内也可以定义在体外 构造函数的主要作用是对对象进行初始化 构造函数一般声明为公有成员，但不能像其他成员一样被显式调用它在定义对象的同时被调用，且只调用一次 在实际应用中有通常要为每一个类定义构造函数 构造函数可以不带参数 构造函数可以重载 用成员初始化列表对数据成员初始化 # 一般表达形式 类名::构造函数名([参数表])[:(成员初始化列表)] {//构造函数体} 成员初始化列表一般形式 数据成员1(初始值1),数据成员2(初始值2),&hellip;.">
 
   
@@ -114,8 +114,8 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "CPPs",
-    "name": "构造函数－成员列表－析构函数",
-    "headline": "构造函数－成员列表－析构函数",
+    "name": "构造函数－成员列表－析构函数－对象数组和对象指针",
+    "headline": "构造函数－成员列表－析构函数－对象数组和对象指针",
     
     "abstract": "类的构造函数和析构函数 #构造函数 # 构造函数的名字必须与类名相同，且不能有返回参数 class Complex{ Private: double real; double imag; Public: Complex(double r,double i) {real=r;imag=i;} }; 定义对象时，编译系统会自动调用构造函数~~（初始化）~~ 与普通成员函数一样，可以定义在体内也可以定义在体外 构造函数的主要作用是对对象进行初始化 构造函数一般声明为公有成员，但不能像其他成员一样被显式调用它在定义对象的同时被调用，且只调用一次 在实际应用中有通常要为每一个类定义构造函数 构造函数可以不带参数 构造函数可以重载 用成员初始化列表对数据成员初始化 # 一般表达形式 类名::构造函数名([参数表])[:(成员初始化列表)] {\/\/构造函数体} 成员初始化列表一般形式 数据成员1(初始值1),数据成员2(初始值2),\u0026hellip;.",
     "inLanguage": "en",
@@ -133,7 +133,7 @@
     "keywords": ["CPP"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "40"
+    "wordCount": "84"
   }
   </script>
 
@@ -349,7 +349,7 @@
     <a
       class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
       href="/cpp/4/"
-      >构造函数－成员列表－析构函数</a
+      >构造函数－成员列表－析构函数－对象数组和对象指针</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -358,7 +358,7 @@
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        构造函数－成员列表－析构函数
+        构造函数－成员列表－析构函数－对象数组和对象指针
       </h1>
       
         <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
@@ -394,7 +394,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-04-18 16:06:55 &#43;0000 UTC">18 April 2024</time><span class="px-2 text-primary-500">&middot;</span><span>40 words</span>
+      <time datetime="2024-04-18 16:06:55 &#43;0000 UTC">18 April 2024</time><span class="px-2 text-primary-500">&middot;</span><span>84 words</span>
     
 
     
@@ -449,6 +449,9 @@
     <li><a href="#构造函数">构造函数</a></li>
     <li><a href="#用成员初始化列表对数据成员初始化">用成员初始化列表对数据成员初始化</a></li>
     <li><a href="#析构函数">析构函数</a></li>
+    <li><a href="#对象数组">对象数组</a></li>
+    <li><a href="#对象指针">对象指针</a></li>
+    <li><a href="#this指针">this指针</a></li>
   </ul>
 </nav>
   </div>
@@ -504,6 +507,44 @@ Public:
 </ul>
 </li>
 </ol>
+<h2 id="对象数组" class="relative group">对象数组 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e5%af%b9%e8%b1%a1%e6%95%b0%e7%bb%84" aria-label="Anchor">#</a></span></h2><ul>
+<li>指每一数组元素都是对象的数组</li>
+<li>定义形式</li>
+</ul>
+<pre tabindex="0"><code>类名 数组名 [下标表达式]
+Complex com[10]
+</code></pre><ul>
+<li>有几个数组元素就要调用几次构造函数</li>
+<li>如果构造函数只有一个参数，在定义对象数组时可以直接在等号后面的花括号内提供实参</li>
+<li>使用格式</li>
+</ul>
+<pre tabindex="0"><code>数组名[下标].成员名
+</code></pre><ul>
+<li>当类中有多个参数的构造函数时，则必须使用如下的形式进行对象数组的初始化</li>
+</ul>
+<pre tabindex="0"><code>Complex com[3]={ //定义对象数组com
+Complex(1.1,2.2),//为第一个对象数组元素提供实参
+Complex(3.3,4,4),//为第二个对象数组元素提供实参
+Complex(5.5,6.6)//为第三个对象数组元素提供实参
+};
+</code></pre><h2 id="对象指针" class="relative group">对象指针 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e5%af%b9%e8%b1%a1%e6%8c%87%e9%92%88" aria-label="Anchor">#</a></span></h2><ul>
+<li>在CPP中，可以直接引用对象，也可通过指向该对象的指针引用对象</li>
+</ul>
+<pre tabindex="0"><code>exe ob; //定义类exe的对象ob
+exe *p; //定义指向类exe的对象指针p
+P=&amp;ob;//将对象ob的地址赋给对象指针p
+</code></pre><ul>
+<li>用对象指针访问对象数组</li>
+</ul>
+<pre tabindex="0"><code>exe ob[2];//定义类exe的对象数组ob[2]
+exe *p;//定义指向类exe的对象指针p
+//数组名代表第一个元素的地址  
+P=ob; //将对象数组ob的地址赋给对象指针p
+</code></pre><h2 id="this指针" class="relative group">this指针 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#this%e6%8c%87%e9%92%88" aria-label="Anchor">#</a></span></h2><ul>
+<li>在每个对象的数据成员中都有一个系统隐含的指针this</li>
+<li>这个指针this的类型为这个对象所属类的类型</li>
+<li>这个指针this的值为包含它的那个对象的首地址</li>
+</ul>
 
       </div>
     </section>

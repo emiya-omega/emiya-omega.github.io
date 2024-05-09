@@ -4,7 +4,7 @@
     <title>Posts on House of Eternity</title>
     <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on House of Eternity</description>
-    <generator>Hugo 0.125.1</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 27 Mar 2024 20:18:42 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
