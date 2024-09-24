@@ -1,10 +1,10 @@
----
-title : 'List'
++++
+title : '线性表'
 date : 2024-09-14T17:23:59+08:00
 tags: ["DS"]
 categories: ["学习笔记"]
 draft : false
----
++++
 # 线性表的基本概念
 
 ## 线性表的定义
