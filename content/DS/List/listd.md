@@ -1,6 +1,6 @@
 ---
-title : 'List'
-date : 2024-09-14T17:23:59+08:00
+title : '线性表基本概念'
+date : 2024-09-12T16:06:55Z
 tags: ["DS"]
 categories: ["学习笔记"]
 draft : false
@@ -117,4 +117,3 @@ void InitList(LinkList &L){
     L->next=NULL;
 }
 //按位查找操作
-
