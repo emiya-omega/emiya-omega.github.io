@@ -133,7 +133,7 @@
     "keywords": ["DS"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "142"
+    "wordCount": "633"
   }
   </script>
 
@@ -394,7 +394,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-09-14 05:23:59 &#43;0000 UTC">14 September 2024</time><span class="px-2 text-primary-500">&middot;</span><span>142 words</span>
+      <time datetime="2024-09-14 05:23:59 &#43;0000 UTC">14 September 2024</time><span class="px-2 text-primary-500">&middot;</span><span>633 words</span>
     
 
     
@@ -449,6 +449,24 @@
     <li><a href="#线性表的定义">线性表的定义</a></li>
     <li><a href="#线性表的抽象数据类型">线性表的抽象数据类型</a></li>
   </ul>
+
+  <ul>
+    <li><a href="#建立单链表">建立单链表</a></li>
+    <li><a href="#双向链表">双向链表</a></li>
+    <li><a href="#线性表的顺序表示和链式表示的比较">线性表的顺序表示和链式表示的比较</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#线性表的合并">线性表的合并</a></li>
+    <li><a href="#静态链表">静态链表</a></li>
+    <li><a href="#循环链表">循环链表</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#有序表定义">有序表定义</a></li>
+    <li><a href="#有序表的查找">有序表的查找</a></li>
+    <li><a href="#tbd">TBD</a></li>
+  </ul>
 </nav>
   </div>
 </details>
@@ -468,82 +486,82 @@
 <li>线性表中的第一个元素a1没有前驱，最后一个元素an没有后继，其余元素ai(2&lt;=i&lt;=n-1)既有前驱ai-1，也有后继ai+1</li>
 <li>线性表中的数据元素之间是一对一的关系</li>
 </ul>
-<h2 id="线性表的抽象数据类型" class="relative group">线性表的抽象数据类型 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%ba%bf%e6%80%a7%e8%a1%a8%e7%9a%84%e6%8a%bd%e8%b1%a1%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" aria-label="Anchor">#</a></span></h2><pre tabindex="0"><code>ADT List{
-    数据对象：D={ai|ai∈ElemSet,i=1,2,...,n,n&gt;=0}
-    数据关系：R1={&lt;ai-1,ai&gt;|ai-1,ai∈D,i=2,3,...,n}
-    基本操作：
-        InitList(&amp;L)
-        DestroyList(&amp;L)
-        ClearList(&amp;L)
-        ListEmpty(L)
-        ListLength(L)
-        GetElem(L,i,&amp;e)
-        LocateElem(L,e)
-        PriorElem(L,e,&amp;pre_e)
-        NextElem(L,e,&amp;next_e)
-}ADT List
-</code></pre><h1 id="线性表的顺序表示和实现" class="relative group">线性表的顺序表示和实现 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%ba%bf%e6%80%a7%e8%a1%a8%e7%9a%84%e9%a1%ba%e5%ba%8f%e8%a1%a8%e7%a4%ba%e5%92%8c%e5%ae%9e%e7%8e%b0" aria-label="Anchor">#</a></span></h1><ul>
+<h2 id="线性表的抽象数据类型" class="relative group">线性表的抽象数据类型 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%ba%bf%e6%80%a7%e8%a1%a8%e7%9a%84%e6%8a%bd%e8%b1%a1%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" aria-label="Anchor">#</a></span></h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">ADT</span> <span class="n">List</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">数据对象：</span><span class="n">D</span><span class="o">=</span><span class="p">{</span><span class="n">ai</span><span class="o">|</span><span class="n">ai</span><span class="err">∈</span><span class="n">ElemSet</span><span class="p">,</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,...,</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="err">数据关系：</span><span class="n">R1</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="n">ai</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">ai</span><span class="o">&gt;|</span><span class="n">ai</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">ai</span><span class="err">∈</span><span class="n">D</span><span class="p">,</span><span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,...,</span><span class="n">n</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="err">基本操作：</span>
+</span></span><span class="line"><span class="cl">        <span class="n">InitList</span><span class="p">(</span><span class="o">&amp;</span><span class="n">L</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">DestroyList</span><span class="p">(</span><span class="o">&amp;</span><span class="n">L</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ClearList</span><span class="p">(</span><span class="o">&amp;</span><span class="n">L</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ListEmpty</span><span class="p">(</span><span class="n">L</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ListLength</span><span class="p">(</span><span class="n">L</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">GetElem</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="o">&amp;</span><span class="n">e</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">LocateElem</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">e</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">PriorElem</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="o">&amp;</span><span class="n">pre_e</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">NextElem</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="o">&amp;</span><span class="n">next_e</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="n">ADT</span> <span class="n">List</span>
+</span></span></code></pre></div><h1 id="线性表的顺序表示和实现" class="relative group">线性表的顺序表示和实现 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%ba%bf%e6%80%a7%e8%a1%a8%e7%9a%84%e9%a1%ba%e5%ba%8f%e8%a1%a8%e7%a4%ba%e5%92%8c%e5%ae%9e%e7%8e%b0" aria-label="Anchor">#</a></span></h1><ul>
 <li>线性表的顺序表示又称为顺序存储结构或顺序映像</li>
 <li>用一组地址连续的存储单元依次存储线性表中的数据元素，从而使得线性表中在逻辑结构上相邻的数据元素在物理存储位置上也相邻</li>
 <li>顺序存储的线性表称为顺序表</li>
 <li>顺序表的结构体定义</li>
 </ul>
-<pre tabindex="0"><code>#define MaxSize 50
-typedef struct{
-    ElemType data[MaxSize];
-    int length;
-}SqList;
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#define MaxSize 50
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">typedef</span> <span class="k">struct</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ElemType</span> <span class="n">data</span><span class="p">[</span><span class="n">MaxSize</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">length</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="n">SqList</span><span class="p">;</span>
+</span></span></code></pre></div><ul>
 <li>顺序表的基本操作</li>
 </ul>
-<pre tabindex="0"><code>//初始化线性表
-void InitList(SqList &amp;L){
-    for(int i=0;i&lt;MaxSize;i++){
-        L.data[i]=0;
-    }
-    L.length=0;
-}
-//插入操作
-bool ListInsert(SqList &amp;L,int i,ElemType e){
-    if(i&lt;1||i&gt;L.length+1){
-        return false;
-    }
-    if(L.length&gt;=MaxSize){
-    
-}
-    for(int j=L.length;j&gt;=i;j--){
-        L.data[j]=L.data[j-1];
-    }
-    L.data[i-1]=e;
-    L.length++;
-    return true;
-}
-//删除操作
-bool ListDelete(SqList &amp;L,int i,ElemType &amp;e){
-    if(i&lt;1||i&gt;L.length){
-        return false;
-    }
-    e=L.data[i-1];
-    for(int j=i;j&lt;L.length;j++){
-        L.data[j-1]=L.data[j];
-    }
-    L.length--;
-    return true;
-}
-//按位查找操作
-ElemType GetElem(SqList L,int i){
-    return L.data[i-1];
-}
-//按值查找操作
-int LocateElem(SqList L,ElemType e){
-    for(int i=0;i&lt;L.length;i++){
-        if(L.data[i]==e){
-            return i+1;
-        }
-    }
-    return 0;
-}
-</code></pre><h1 id="线性表的链式表示和实现" class="relative group">线性表的链式表示和实现 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%ba%bf%e6%80%a7%e8%a1%a8%e7%9a%84%e9%93%be%e5%bc%8f%e8%a1%a8%e7%a4%ba%e5%92%8c%e5%ae%9e%e7%8e%b0" aria-label="Anchor">#</a></span></h1><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//初始化线性表
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">InitList</span><span class="p">(</span><span class="n">SqList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">MaxSize</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">L</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="p">.</span><span class="n">length</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//插入操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="nf">ListInsert</span><span class="p">(</span><span class="n">SqList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">ElemType</span> <span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">||</span><span class="n">i</span><span class="o">&gt;</span><span class="n">L</span><span class="p">.</span><span class="n">length</span><span class="o">+</span><span class="mi">1</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">L</span><span class="p">.</span><span class="n">length</span><span class="o">&gt;=</span><span class="n">MaxSize</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">L</span><span class="p">.</span><span class="n">length</span><span class="p">;</span><span class="n">j</span><span class="o">&gt;=</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">--</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">L</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">L</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="p">.</span><span class="n">length</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//删除操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="nf">ListDelete</span><span class="p">(</span><span class="n">SqList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">ElemType</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">||</span><span class="n">i</span><span class="o">&gt;</span><span class="n">L</span><span class="p">.</span><span class="n">length</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">e</span><span class="o">=</span><span class="n">L</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">L</span><span class="p">.</span><span class="n">length</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">L</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">L</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="p">.</span><span class="n">length</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//按位查找操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">ElemType</span> <span class="nf">GetElem</span><span class="p">(</span><span class="n">SqList</span> <span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">i</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">L</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//按值查找操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">LocateElem</span><span class="p">(</span><span class="n">SqList</span> <span class="n">L</span><span class="p">,</span><span class="n">ElemType</span> <span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">L</span><span class="p">.</span><span class="n">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">L</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h1 id="线性表的链式表示和实现" class="relative group">线性表的链式表示和实现 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%ba%bf%e6%80%a7%e8%a1%a8%e7%9a%84%e9%93%be%e5%bc%8f%e8%a1%a8%e7%a4%ba%e5%92%8c%e5%ae%9e%e7%8e%b0" aria-label="Anchor">#</a></span></h1><ul>
 <li>
 <p>线性表的链式表示又称为链式存储结构</p>
 </li>
@@ -560,20 +578,374 @@ int LocateElem(SqList L,ElemType e){
 <p>结点结构体定义</p>
 </li>
 </ul>
-<pre tabindex="0"><code>typedef struct LNode{
-    ElemType data;
-    struct LNode *next;
-}LNode,*LinkList;
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">struct</span> <span class="nc">LNode</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ElemType</span> <span class="n">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="nc">LNode</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="n">LNode</span><span class="p">,</span><span class="o">*</span><span class="n">LinkList</span><span class="p">;</span>
+</span></span></code></pre></div><ul>
 <li>链表的基本操作</li>
 </ul>
-<pre tabindex="0"><code>//初始化链表
-void InitList(LinkList &amp;L){
-    L=(LinkList)malloc(sizeof(LNode));
-    L-&gt;next=NULL;
-}
-//按位查找操作
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//初始化链表
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">InitList</span><span class="p">(</span><span class="n">LinkList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="o">=</span><span class="p">(</span><span class="n">LinkList</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">LNode</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//按位查找操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="n">LNode</span> <span class="o">*</span><span class="nf">GetElem</span><span class="p">(</span><span class="n">LinkList</span> <span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">i</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LNode</span> <span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">L</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">L</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">p</span><span class="o">!=</span><span class="nb">NULL</span><span class="o">&amp;&amp;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">i</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//按值查找操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">LNode</span> <span class="o">*</span><span class="nf">LocateElem</span><span class="p">(</span><span class="n">LinkList</span> <span class="n">L</span><span class="p">,</span><span class="n">ElemType</span> <span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LNode</span> <span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">L</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">p</span><span class="o">!=</span><span class="nb">NULL</span><span class="o">&amp;&amp;</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">data</span><span class="o">!=</span><span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//插入操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="nf">ListInsert</span><span class="p">(</span><span class="n">LinkList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">ElemType</span> <span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LNode</span> <span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">GetElem</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span><span class="c1">//找到第i-1个结点   
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LNode</span> <span class="o">*</span><span class="n">s</span><span class="o">=</span><span class="p">(</span><span class="n">LNode</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">LNode</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="o">-&gt;</span><span class="n">data</span><span class="o">=</span><span class="n">e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//删除操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="nf">ListDelete</span><span class="p">(</span><span class="n">LinkList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">ElemType</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LNode</span> <span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">GetElem</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LNode</span> <span class="o">*</span><span class="n">q</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">e</span><span class="o">=</span><span class="n">q</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">q</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">free</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="建立单链表" class="relative group">建立单链表 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e5%bb%ba%e7%ab%8b%e5%8d%95%e9%93%be%e8%a1%a8" aria-label="Anchor">#</a></span></h2><ul>
+<li>头插法</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">CreateList_H</span><span class="p">(</span><span class="n">LinkList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="o">=</span><span class="p">(</span><span class="n">LinkList</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">LNode</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">LNode</span> <span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="p">(</span><span class="n">LNode</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">LNode</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">L</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">L</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li>尾插法</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">CreateList_L</span><span class="p">(</span><span class="n">LinkList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="o">=</span><span class="p">(</span><span class="n">LinkList</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">LNode</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">LNode</span> <span class="o">*</span><span class="n">r</span><span class="o">=</span><span class="n">L</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">LNode</span> <span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="p">(</span><span class="n">LNode</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">LNode</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">r</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">r</span><span class="o">=</span><span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">r</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="双向链表" class="relative group">双向链表 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e5%8f%8c%e5%90%91%e9%93%be%e8%a1%a8" aria-label="Anchor">#</a></span></h2><ul>
+<li>双向链表的结构体定义</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">struct</span> <span class="nc">DNode</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ElemType</span> <span class="n">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="nc">DNode</span> <span class="o">*</span><span class="n">prior</span><span class="p">,</span><span class="o">*</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="n">DNode</span><span class="p">,</span><span class="o">*</span><span class="n">DLinkList</span><span class="p">;</span>
+</span></span></code></pre></div><ul>
+<li>双向链表的基本操作</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//初始化双向链表
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">InitDList</span><span class="p">(</span><span class="n">DLinkList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="o">=</span><span class="p">(</span><span class="n">DLinkList</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">DNode</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="o">-&gt;</span><span class="n">prior</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//按位查找操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">DNode</span> <span class="o">*</span><span class="nf">GetElem</span><span class="p">(</span><span class="n">DLinkList</span> <span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">i</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DNode</span> <span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">L</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">L</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">p</span><span class="o">!=</span><span class="nb">NULL</span><span class="o">&amp;&amp;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">i</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//按值查找操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">DNode</span> <span class="o">*</span><span class="nf">LocateElem</span><span class="p">(</span><span class="n">DLinkList</span> <span class="n">L</span><span class="p">,</span><span class="n">ElemType</span> <span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DNode</span> <span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">L</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">p</span><span class="o">!=</span><span class="nb">NULL</span><span class="o">&amp;&amp;</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">data</span><span class="o">!=</span><span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//插入操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="nf">ListInsert</span><span class="p">(</span><span class="n">DLinkList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">ElemType</span> <span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DNode</span> <span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">GetElem</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span><span class="c1">//找到第i-1个结点   
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DNode</span> <span class="o">*</span><span class="n">s</span><span class="o">=</span><span class="p">(</span><span class="n">DNode</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">DNode</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="o">-&gt;</span><span class="n">data</span><span class="o">=</span><span class="n">e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="o">-&gt;</span><span class="n">prior</span><span class="o">=</span><span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">prior</span><span class="o">=</span><span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//删除操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="nf">ListDelete</span><span class="p">(</span><span class="n">DLinkList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">ElemType</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DNode</span> <span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">GetElem</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DNode</span> <span class="o">*</span><span class="n">q</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">e</span><span class="o">=</span><span class="n">q</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">q</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">q</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">q</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">prior</span><span class="o">=</span><span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">free</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="线性表的顺序表示和链式表示的比较" class="relative group">线性表的顺序表示和链式表示的比较 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%ba%bf%e6%80%a7%e8%a1%a8%e7%9a%84%e9%a1%ba%e5%ba%8f%e8%a1%a8%e7%a4%ba%e5%92%8c%e9%93%be%e5%bc%8f%e8%a1%a8%e7%a4%ba%e7%9a%84%e6%af%94%e8%be%83" aria-label="Anchor">#</a></span></h2><ul>
+<li>顺序表
+<ul>
+<li>优点：可以随机存取，存储密度高</li>
+<li>缺点：大片连续空间分配不方便，改变容量不方便</li>
+</ul>
+</li>
+<li>链表
+<ul>
+<li>优点：离散的小空间分配方便，改变容量方便</li>
+<li>缺点：不可随机存取，存储密度低</li>
+</ul>
+</li>
+</ul>
+<h1 id="线性表的应用" class="relative group">线性表的应用 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%ba%bf%e6%80%a7%e8%a1%a8%e7%9a%84%e5%ba%94%e7%94%a8" aria-label="Anchor">#</a></span></h1><h2 id="线性表的合并" class="relative group">线性表的合并 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%ba%bf%e6%80%a7%e8%a1%a8%e7%9a%84%e5%90%88%e5%b9%b6" aria-label="Anchor">#</a></span></h2><ul>
+<li>假设线性表La和Lb分别表示两个集合A和B，现要求一个新的集合A∪B</li>
+<li>合并操作</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">unionL</span><span class="p">(</span><span class="n">LList</span> <span class="o">&amp;</span><span class="n">La</span><span class="p">,</span><span class="n">LList</span> <span class="n">Lb</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">La_len</span><span class="o">=</span><span class="n">Llength</span><span class="p">(</span><span class="n">La</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">Lb_len</span><span class="o">=</span><span class="n">Llength</span><span class="p">(</span><span class="n">Lb</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">Lb_len</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ElemType</span> <span class="n">e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">GetElem</span><span class="p">(</span><span class="n">Lb</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">e</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">LocateElem</span><span class="p">(</span><span class="n">La</span><span class="p">,</span><span class="n">e</span><span class="p">)){</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ListInsert</span><span class="p">(</span><span class="n">La</span><span class="p">,</span><span class="o">++</span><span class="n">La_len</span><span class="p">,</span><span class="n">e</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="静态链表" class="relative group">静态链表 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e9%9d%99%e6%80%81%e9%93%be%e8%a1%a8" aria-label="Anchor">#</a></span></h2><ul>
+<li>静态链表的结构体定义</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#define MaxSize 50
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">typedef</span> <span class="k">struct</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ElemType</span> <span class="n">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="n">SLinkList</span><span class="p">[</span><span class="n">MaxSize</span><span class="p">];</span>
+</span></span></code></pre></div><ul>
+<li>静态链表的基本操作</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//初始化静态链表
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">InitList</span><span class="p">(</span><span class="n">SLinkList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">MaxSize</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">next</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="p">[</span><span class="n">MaxSize</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="n">next</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//按位查找操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">GetElem</span><span class="p">(</span><span class="n">SLinkList</span> <span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">i</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">||</span><span class="n">i</span><span class="o">&gt;</span><span class="n">MaxSize</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//按值查找操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">LocateElem</span><span class="p">(</span><span class="n">SLinkList</span> <span class="n">L</span><span class="p">,</span><span class="n">ElemType</span> <span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">!=</span><span class="mi">0</span><span class="o">&amp;&amp;</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">data</span><span class="o">!=</span><span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">i</span><span class="o">=</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//插入操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="nf">ListInsert</span><span class="p">(</span><span class="n">SLinkList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">ElemType</span> <span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">GetElem</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">l</span><span class="o">&lt;</span><span class="n">i</span><span class="p">;</span><span class="n">l</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">k</span><span class="o">=</span><span class="n">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">j</span><span class="o">=</span><span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">q</span><span class="o">=</span><span class="n">GetElem</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">next</span><span class="o">=</span><span class="n">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">next</span><span class="o">=</span><span class="n">q</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">next</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">data</span><span class="o">=</span><span class="n">e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">next</span><span class="o">=</span><span class="n">q</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//删除操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="nf">ListDelete</span><span class="p">(</span><span class="n">SLinkList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">ElemType</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">GetElem</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">l</span><span class="o">&lt;</span><span class="n">i</span><span class="p">;</span><span class="n">l</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">k</span><span class="o">=</span><span class="n">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">j</span><span class="o">=</span><span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">q</span><span class="o">=</span><span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">e</span><span class="o">=</span><span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">next</span><span class="o">=</span><span class="n">L</span><span class="p">[</span><span class="n">q</span><span class="p">].</span><span class="n">next</span><span class="p">;</span><span class="c1">//将q结点从链表中断开
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">L</span><span class="p">[</span><span class="n">q</span><span class="p">].</span><span class="n">next</span><span class="o">=</span><span class="n">GetElem</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span><span class="c1">//回收结点q
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">next</span><span class="o">=</span><span class="n">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li>静态链表的使用跟顺序表一样，都需要预先分配较大的空间</li>
+<li>在进行插入删除操作时，只需要改变指针的指向，不需要移动元素，所以时间复杂度为O(1)</li>
+<li>静态链表也可以用于解决哈希冲突问题</li>
+</ul>
+<h2 id="循环链表" class="relative group">循环链表 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e5%be%aa%e7%8e%af%e9%93%be%e8%a1%a8" aria-label="Anchor">#</a></span></h2><ul>
+<li>循环链表的结构体定义</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">struct</span> <span class="nc">LNode</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ElemType</span> <span class="n">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="nc">LNode</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="n">LNode</span><span class="p">,</span><span class="o">*</span><span class="n">LinkList</span><span class="p">;</span>
+</span></span></code></pre></div><ul>
+<li>循环链表的基本操作</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//初始化循环链表
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">InitList</span><span class="p">(</span><span class="n">LinkList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="o">=</span><span class="p">(</span><span class="n">LinkList</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">LNode</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">L</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//按位查找操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">LNode</span> <span class="o">*</span><span class="nf">GetElem</span><span class="p">(</span><span class="n">LinkList</span> <span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">i</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LNode</span> <span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">L</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">L</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">p</span><span class="o">!=</span><span class="n">L</span><span class="o">&amp;&amp;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">i</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//按值查找操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">LNode</span> <span class="o">*</span><span class="nf">LocateElem</span><span class="p">(</span><span class="n">LinkList</span> <span class="n">L</span><span class="p">,</span><span class="n">ElemType</span> <span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LNode</span> <span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">L</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">p</span><span class="o">!=</span><span class="n">L</span><span class="o">&amp;&amp;</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">data</span><span class="o">!=</span><span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//插入操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="nf">ListInsert</span><span class="p">(</span><span class="n">LinkList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">ElemType</span> <span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LNode</span> <span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">GetElem</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">p</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LNode</span> <span class="o">*</span><span class="n">s</span><span class="o">=</span><span class="p">(</span><span class="n">LNode</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">LNode</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="o">-&gt;</span><span class="n">data</span><span class="o">=</span><span class="n">e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//删除操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="nf">ListDelete</span><span class="p">(</span><span class="n">LinkList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">ElemType</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LNode</span> <span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">GetElem</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LNode</span> <span class="o">*</span><span class="n">q</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">e</span><span class="o">=</span><span class="n">q</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">q</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">free</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li>特点
+<ul>
+<li>表中最后一个结点的指针指向头结点而不再是NULL，整个链表形成一个环</li>
+<li>从表中任一结点出发均可找到链表中的其他结点</li>
+<li>循环链表可以避免单链表判空操作</li>
+<li>循环链表的最后一个结点的next指针指向头结点</li>
+<li>循环链表可以用来解决约瑟夫环问题</li>
+</ul>
+</li>
+</ul>
+<h1 id="有序表" class="relative group">有序表 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%9c%89%e5%ba%8f%e8%a1%a8" aria-label="Anchor">#</a></span></h1><h2 id="有序表定义" class="relative group">有序表定义 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%9c%89%e5%ba%8f%e8%a1%a8%e5%ae%9a%e4%b9%89" aria-label="Anchor">#</a></span></h2><ul>
+<li>有序表是一种线性表，其元素是按关键字有序排列的</li>
+<li>所有元素以递增or递减方式有序排列的线性表称为有序表</li>
+<li>有序表和线性表的逻辑结构相同，区别是个别运算不同</li>
+<li>以顺序结构进行存储时，其中只有ListInsert()基本运算有所差异，其余基本相同。</li>
+<li>有序顺序表的ListInsert()运算</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">ListInsert</span><span class="p">(</span><span class="n">SqList</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">ElemType</span> <span class="n">e</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">L</span><span class="p">.</span><span class="n">length</span><span class="p">;</span><span class="n">j</span><span class="o">&gt;=</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">--</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">L</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">L</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="p">.</span><span class="n">length</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="有序表的查找" class="relative group">有序表的查找 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%9c%89%e5%ba%8f%e8%a1%a8%e7%9a%84%e6%9f%a5%e6%89%be" aria-label="Anchor">#</a></span></h2><ul>
+<li>有序表的查找
+<ul>
+<li>二分查找</li>
+<li>插值查找</li>
+<li>斐波那契查找</li>
+</ul>
+</li>
+<li>二分查找
+<ul>
+<li>假设有序表为L，要查找的元素为e，L的长度为n，则查找过程如下：
+<ul>
+<li>取L的中间元素L[mid]，如果L[mid]==e，则查找成功，返回mid</li>
+<li>如果L[mid]&gt;e，则在L的左半部分继续查找</li>
+<li>如果L[mid]&lt;e，则在L的右半部分继续查找</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="tbd" class="relative group">TBD <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#tbd" aria-label="Anchor">#</a></span></h2>
       </div>
     </section>
     <footer class="max-w-prose pt-8 print:hidden">
@@ -672,6 +1044,17 @@ void InitList(LinkList &amp;L){
     </footer>
   </article>
 
+        
+          <div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12">
+            <a
+              href="#the-top"
+              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
         
       </main><footer class="py-10 print:hidden">
   

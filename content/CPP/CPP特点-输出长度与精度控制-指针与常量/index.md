@@ -1,18 +1,11 @@
 ---
-description: 2024年cpp课堂学习笔记 
-featured_image: images/zhuanzhuan.jpg 
-fearured: true
-categories: ["学习笔记"]
-date: 2024-03-28T19:50:14+08:00
-sort_by: Name # Exif.Date
+title : 'CPP特点-输出长度与精度控制-指针与常量'
+date : 2024-03-28T09:50:14Z
 tags: ["CPP"]
-sort_order: desc
-title: CPP特点-输出长度与精度控制-指针与常量
-#type 
-weight: 3
-params:
-  theme: dark
+categories: ["学习笔记"]
+draft : false
 ---
+
 ## 面向对象语言特点
 - 抽象
 1. 类 -> 抽象
