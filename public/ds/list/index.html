@@ -17,8 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="rgb(255,255,255)" />
   
-  <title>CPP特点-输出长度与精度控制-指针与常量 &middot; House of Eternity</title>
-    <meta name="title" content="CPP特点-输出长度与精度控制-指针与常量 &middot; House of Eternity" />
+  <title>线性表基本概念 &middot; House of Eternity</title>
+    <meta name="title" content="线性表基本概念 &middot; House of Eternity" />
   
   
   
@@ -71,13 +71,15 @@
   <meta
     name="description"
     content="
-      2024年cpp课堂学习笔记
+      
+        
+      
     "
   />
   
   
   
-  <link rel="canonical" href="http://localhost:1313/cpp/cpp%E7%89%B9%E7%82%B9-%E8%BE%93%E5%87%BA%E9%95%BF%E5%BA%A6%E4%B8%8E%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6-%E6%8C%87%E9%92%88%E4%B8%8E%E5%B8%B8%E9%87%8F/" />
+  <link rel="canonical" href="http://localhost:1313/ds/list/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -92,48 +94,46 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/cpp/cpp%E7%89%B9%E7%82%B9-%E8%BE%93%E5%87%BA%E9%95%BF%E5%BA%A6%E4%B8%8E%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6-%E6%8C%87%E9%92%88%E4%B8%8E%E5%B8%B8%E9%87%8F/">
+  <meta property="og:url" content="http://localhost:1313/ds/list/">
   <meta property="og:site_name" content="House of Eternity">
-  <meta property="og:title" content="CPP特点-输出长度与精度控制-指针与常量">
-  <meta property="og:description" content="2024年cpp课堂学习笔记">
+  <meta property="og:title" content="线性表基本概念">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="cpp">
-    <meta property="article:published_time" content="2024-03-28T19:50:14+08:00">
-    <meta property="article:modified_time" content="2024-03-28T19:50:14+08:00">
-    <meta property="article:tag" content="CPP">
+    <meta property="article:section" content="ds">
+    <meta property="article:published_time" content="2024-09-12T16:06:55+00:00">
+    <meta property="article:modified_time" content="2024-09-12T16:06:55+00:00">
+    <meta property="article:tag" content="DS">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="CPP特点-输出长度与精度控制-指针与常量">
-  <meta name="twitter:description" content="2024年cpp课堂学习笔记">
+  <meta name="twitter:title" content="线性表基本概念">
 
   
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "articleSection": "CPPs",
-    "name": "CPP特点-输出长度与精度控制-指针与常量",
-    "headline": "CPP特点-输出长度与精度控制-指针与常量",
-    "description": "2024年cpp课堂学习笔记",
+    "articleSection": "DSes",
+    "name": "线性表基本概念",
+    "headline": "线性表基本概念",
+    
     
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/cpp\/cpp%E7%89%B9%E7%82%B9-%E8%BE%93%E5%87%BA%E9%95%BF%E5%BA%A6%E4%B8%8E%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6-%E6%8C%87%E9%92%88%E4%B8%8E%E5%B8%B8%E9%87%8F\/",
+    "url" : "http:\/\/localhost:1313\/ds\/list\/",
     "author" : {
       "@type": "Person",
       "name": "Emiya-Omega"
     },
     "copyrightYear": "2024",
-    "dateCreated": "2024-03-28T19:50:14\u002b08:00",
-    "datePublished": "2024-03-28T19:50:14\u002b08:00",
+    "dateCreated": "2024-09-12T16:06:55\u002b00:00",
+    "datePublished": "2024-09-12T16:06:55\u002b00:00",
     
-    "dateModified": "2024-03-28T19:50:14\u002b08:00",
+    "dateModified": "2024-09-12T16:06:55\u002b00:00",
     
-    "keywords": ["CPP"],
+    "keywords": ["DS"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "62"
+    "wordCount": "142"
   }
   </script>
 
@@ -339,8 +339,8 @@
   <li class=" inline">
     <a
       class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
-      href="/cpp/"
-      >CPPs</a
+      href="/ds/"
+      >DSes</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -348,8 +348,8 @@
   <li class="hidden inline">
     <a
       class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
-      href="/cpp/cpp%E7%89%B9%E7%82%B9-%E8%BE%93%E5%87%BA%E9%95%BF%E5%BA%A6%E4%B8%8E%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6-%E6%8C%87%E9%92%88%E4%B8%8E%E5%B8%B8%E9%87%8F/"
-      >CPP特点-输出长度与精度控制-指针与常量</a
+      href="/ds/list/"
+      >线性表基本概念</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -358,7 +358,7 @@
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        CPP特点-输出长度与精度控制-指针与常量
+        线性表基本概念
       </h1>
       
         <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
@@ -394,7 +394,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-03-28 19:50:14 &#43;0800 CST">28 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span>62 words</span>
+      <time datetime="2024-09-12 16:06:55 &#43;0000 UTC">12 September 2024</time><span class="px-2 text-primary-500">&middot;</span><span>142 words</span>
     
 
     
@@ -418,9 +418,9 @@
         
           
             <a
-              href="/tags/cpp/"
+              href="/tags/ds/"
               class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >CPP</a
+              >DS</a
             >
           
         
@@ -446,26 +446,10 @@
   <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#面向对象语言特点">面向对象语言特点</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#cpp向下兼容c语言">cpp向下兼容c语言</a></li>
-            <li><a href="#cpp中不允许嵌套使用">cpp中不允许/**/嵌套使用</a></li>
-            <li><a href="#cout_line_"><code>cout&lt;&lt;_LINE_&lt;&lt;~~;</code></a></li>
-            <li><a href="#通常只有规模很小一般为15条语句而频繁使用函数才定义为内联函数">通常只有规模很小(一般为1~5条语句)而频繁使用函数才定义为内联函数</a></li>
-          </ul>
-        </li>
-        <li><a href="#输出长度与精度控制">输出长度与精度控制</a>
-          <ul>
-            <li><a href="#cpp中函数可以重载只要函数参数的类型不同or参数的个数不同或者二者兼而有之两个or两个以上的函数可以使用相同的函数名">cpp中函数可以重载.只要函数参数的类型不同,or参数的个数不同,或者二者兼而有之,两个or两个以上的函数可以使用相同的函数名</a></li>
-            <li><a href="#指向常量的指针">指向常量的指针</a></li>
-            <li><a href="#指向字符串的常指针">指向字符串的常指针</a></li>
-            <li><a href="#指向常量的常指针">指向常量的常指针</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
+    <li><a href="#线性表的定义">线性表的定义</a></li>
+    <li><a href="#线性表的抽象数据类型">线性表的抽象数据类型</a></li>
+    <li><a href="#线性表的顺序表示和实现">线性表的顺序表示和实现</a></li>
+    <li><a href="#线性表的链式表示和实现">线性表的链式表示和实现</a></li>
   </ul>
 </nav>
   </div>
@@ -475,46 +459,123 @@
         </div>
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        <h2 id="面向对象语言特点" class="relative group">面向对象语言特点 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e8%af%ad%e8%a8%80%e7%89%b9%e7%82%b9" aria-label="Anchor">#</a></span></h2><ul>
-<li>抽象</li>
+        <h1 id="线性表的基本概念" class="relative group">线性表的基本概念 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%ba%bf%e6%80%a7%e8%a1%a8%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" aria-label="Anchor">#</a></span></h1><h2 id="线性表的定义" class="relative group">线性表的定义 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%ba%bf%e6%80%a7%e8%a1%a8%e7%9a%84%e5%ae%9a%e4%b9%89" aria-label="Anchor">#</a></span></h2><ul>
+<li>线性表：具有相同特性的数据元素的有限序列</li>
+<li>线性表中的数据元素称为元素</li>
+<li>线性表中的数据元素个数称为线性表的长度，用n表示，n大于等于0，当n=0时，称为空表</li>
 </ul>
-<ol>
-<li>类 -&gt; 抽象</li>
-<li>对象 -&gt; 具体</li>
-</ol>
-<ul>
-<li>封装</li>
+<pre tabindex="0"><code>A=(a1,a2,a3,...,an)
+</code></pre><ul>
+<li>线性表中的数据元素ai(1&lt;=i&lt;=n)称为线性表中的第i个元素，ai的序号i称为元素ai在线性表中的位置</li>
+<li>线性表中的第一个元素a1没有前驱，最后一个元素an没有后继，其余元素ai(2&lt;=i&lt;=n-1)既有前驱ai-1，也有后继ai+1</li>
+<li>线性表中的数据元素之间是一对一的关系</li>
 </ul>
-<ol>
-<li>成员变量(私)</li>
-<li>成员函数(公)</li>
-</ol>
-<ul>
-<li>继承</li>
-<li>多态</li>
+<h2 id="线性表的抽象数据类型" class="relative group">线性表的抽象数据类型 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%ba%bf%e6%80%a7%e8%a1%a8%e7%9a%84%e6%8a%bd%e8%b1%a1%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" aria-label="Anchor">#</a></span></h2><pre tabindex="0"><code>ADT List{
+    数据对象：D={ai|ai∈ElemSet,i=1,2,...,n,n&gt;=0}
+    数据关系：R1={&lt;ai-1,ai&gt;|ai-1,ai∈D,i=2,3,...,n}
+    基本操作：
+        InitList(&amp;L)
+        DestroyList(&amp;L)
+        ClearList(&amp;L)
+        ListEmpty(L)
+        ListLength(L)
+        GetElem(L,i,&amp;e)
+        LocateElem(L,e)
+        PriorElem(L,e,&amp;pre_e)
+        NextElem(L,e,&amp;next_e)
+}ADT List
+</code></pre><h2 id="线性表的顺序表示和实现" class="relative group">线性表的顺序表示和实现 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%ba%bf%e6%80%a7%e8%a1%a8%e7%9a%84%e9%a1%ba%e5%ba%8f%e8%a1%a8%e7%a4%ba%e5%92%8c%e5%ae%9e%e7%8e%b0" aria-label="Anchor">#</a></span></h2><ul>
+<li>线性表的顺序表示又称为顺序存储结构或顺序映像</li>
+<li>用一组地址连续的存储单元依次存储线性表中的数据元素，从而使得线性表中在逻辑结构上相邻的数据元素在物理存储位置上也相邻</li>
+<li>顺序存储的线性表称为顺序表</li>
+<li>顺序表的结构体定义</li>
 </ul>
-<h4 id="cpp向下兼容c语言" class="relative group">cpp向下兼容c语言 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cpp%e5%90%91%e4%b8%8b%e5%85%bc%e5%ae%b9c%e8%af%ad%e8%a8%80" aria-label="Anchor">#</a></span></h4><h4 id="cpp中不允许嵌套使用" class="relative group">cpp中不允许/**/嵌套使用 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cpp%e4%b8%ad%e4%b8%8d%e5%85%81%e8%ae%b8%e5%b5%8c%e5%a5%97%e4%bd%bf%e7%94%a8" aria-label="Anchor">#</a></span></h4><h4 id="cout_line_" class="relative group"><code>cout&lt;&lt;_LINE_&lt;&lt;~~;</code> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cout_line_" aria-label="Anchor">#</a></span></h4><ul>
-<li>显示该语句位于源程序第几行</li>
+<pre tabindex="0"><code>#define MaxSize 50
+typedef struct{
+    ElemType data[MaxSize];
+    int length;
+}SqList;
+</code></pre><ul>
+<li>顺序表的基本操作</li>
 </ul>
-<h4 id="通常只有规模很小一般为15条语句而频繁使用函数才定义为内联函数" class="relative group">通常只有规模很小(一般为1~5条语句)而频繁使用函数才定义为内联函数 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e9%80%9a%e5%b8%b8%e5%8f%aa%e6%9c%89%e8%a7%84%e6%a8%a1%e5%be%88%e5%b0%8f%e4%b8%80%e8%88%ac%e4%b8%ba15%e6%9d%a1%e8%af%ad%e5%8f%a5%e8%80%8c%e9%a2%91%e7%b9%81%e4%bd%bf%e7%94%a8%e5%87%bd%e6%95%b0%e6%89%8d%e5%ae%9a%e4%b9%89%e4%b8%ba%e5%86%85%e8%81%94%e5%87%bd%e6%95%b0" aria-label="Anchor">#</a></span></h4><h3 id="输出长度与精度控制" class="relative group">输出长度与精度控制 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e8%be%93%e5%87%ba%e9%95%bf%e5%ba%a6%e4%b8%8e%e7%b2%be%e5%ba%a6%e6%8e%a7%e5%88%b6" aria-label="Anchor">#</a></span></h3><pre tabindex="0"><code>#include &lt;iomainip&gt; //std::setw
-cout&lt;&lt;setw(10);限制输出长度为10
-cout&lt;&lt;setprecision(5)&lt;&lt;~;//限制输出精度
-cout&lt;&lt;fixed;//用定点数表示法表示浮点数
-</code></pre><h4 id="cpp中函数可以重载只要函数参数的类型不同or参数的个数不同或者二者兼而有之两个or两个以上的函数可以使用相同的函数名" class="relative group">cpp中函数可以重载.只要函数参数的类型不同,or参数的个数不同,或者二者兼而有之,两个or两个以上的函数可以使用相同的函数名 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cpp%e4%b8%ad%e5%87%bd%e6%95%b0%e5%8f%af%e4%bb%a5%e9%87%8d%e8%bd%bd%e5%8f%aa%e8%a6%81%e5%87%bd%e6%95%b0%e5%8f%82%e6%95%b0%e7%9a%84%e7%b1%bb%e5%9e%8b%e4%b8%8d%e5%90%8cor%e5%8f%82%e6%95%b0%e7%9a%84%e4%b8%aa%e6%95%b0%e4%b8%8d%e5%90%8c%e6%88%96%e8%80%85%e4%ba%8c%e8%80%85%e5%85%bc%e8%80%8c%e6%9c%89%e4%b9%8b%e4%b8%a4%e4%b8%aaor%e4%b8%a4%e4%b8%aa%e4%bb%a5%e4%b8%8a%e7%9a%84%e5%87%bd%e6%95%b0%e5%8f%af%e4%bb%a5%e4%bd%bf%e7%94%a8%e7%9b%b8%e5%90%8c%e7%9a%84%e5%87%bd%e6%95%b0%e5%90%8d" aria-label="Anchor">#</a></span></h4><h4 id="指向常量的指针" class="relative group">指向常量的指针 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%8c%87%e5%90%91%e5%b8%b8%e9%87%8f%e7%9a%84%e6%8c%87%e9%92%88" aria-label="Anchor">#</a></span></h4><p><code>const char *name =&quot;chen&quot;;</code></p>
-<ol>
-<li>*name 是常量(name不允许改变)
-<code>name[3]='a' ;</code> is ERROR</li>
-<li>name是指向常量的指针变量(指针name本身可以改变)
-<code>name =&quot;zhang&quot;;</code> is RIGHT</li>
-</ol>
-<h4 id="指向字符串的常指针" class="relative group">指向字符串的常指针 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%8c%87%e5%90%91%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%9a%84%e5%b8%b8%e6%8c%87%e9%92%88" aria-label="Anchor">#</a></span></h4><p><code>char* const name =&quot;chen&quot;;</code></p>
-<ol>
-<li>name是常量(name不允许改变)</li>
-<li>指针的地址不允许改变
-<code>name = &quot;zhang&quot;</code> is ERROR</li>
-</ol>
-<h4 id="指向常量的常指针" class="relative group">指向常量的常指针 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%8c%87%e5%90%91%e5%b8%b8%e9%87%8f%e7%9a%84%e5%b8%b8%e6%8c%87%e9%92%88" aria-label="Anchor">#</a></span></h4><p><code>const char* const name =&quot;chen&quot;;</code></p>
-
+<pre tabindex="0"><code>//初始化线性表
+void InitList(SqList &amp;L){
+    for(int i=0;i&lt;MaxSize;i++){
+        L.data[i]=0;
+    }
+    L.length=0;
+}
+//插入操作
+bool ListInsert(SqList &amp;L,int i,ElemType e){
+    if(i&lt;1||i&gt;L.length+1){
+        return false;
+    }
+    if(L.length&gt;=MaxSize){
+    
+}
+    for(int j=L.length;j&gt;=i;j--){
+        L.data[j]=L.data[j-1];
+    }
+    L.data[i-1]=e;
+    L.length++;
+    return true;
+}
+//删除操作
+bool ListDelete(SqList &amp;L,int i,ElemType &amp;e){
+    if(i&lt;1||i&gt;L.length){
+        return false;
+    }
+    e=L.data[i-1];
+    for(int j=i;j&lt;L.length;j++){
+        L.data[j-1]=L.data[j];
+    }
+    L.length--;
+    return true;
+}
+//按位查找操作
+ElemType GetElem(SqList L,int i){
+    return L.data[i-1];
+}
+//按值查找操作
+int LocateElem(SqList L,ElemType e){
+    for(int i=0;i&lt;L.length;i++){
+        if(L.data[i]==e){
+            return i+1;
+        }
+    }
+    return 0;
+}
+</code></pre><h2 id="线性表的链式表示和实现" class="relative group">线性表的链式表示和实现 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%ba%bf%e6%80%a7%e8%a1%a8%e7%9a%84%e9%93%be%e5%bc%8f%e8%a1%a8%e7%a4%ba%e5%92%8c%e5%ae%9e%e7%8e%b0" aria-label="Anchor">#</a></span></h2><ul>
+<li>
+<p>线性表的链式表示又称为链式存储结构</p>
+</li>
+<li>
+<p>用一组任意的存储单元存储线性表中的数据元素，这组存储单元可以是连续的，也可以是不连续的</p>
+</li>
+<li>
+<p>链式存储的线性表称为链表</p>
+</li>
+<li>
+<p>链表中的数据元素称为结点，每个结点包括两个部分：一个是存储数据元素的数据域，另一个是存储数据元素直接后继位置的指针域</p>
+</li>
+<li>
+<p>结点结构体定义</p>
+</li>
+</ul>
+<pre tabindex="0"><code>typedef struct LNode{
+    ElemType data;
+    struct LNode *next;
+}LNode,*LinkList;
+</code></pre><ul>
+<li>链表的基本操作</li>
+</ul>
+<pre tabindex="0"><code>//初始化链表
+void InitList(LinkList &amp;L){
+    L=(LinkList)malloc(sizeof(LNode));
+    L-&gt;next=NULL;
+}
+//按位查找操作
+</code></pre>
       </div>
     </section>
     <footer class="max-w-prose pt-8 print:hidden">
@@ -606,43 +667,6 @@ cout&lt;&lt;fixed;//用定点数表示法表示浮点数
       
 
       
-  
-    
-    
-    
-      
-      
-    
-    <div class="pt-8">
-      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
-      <div class="flex justify-between pt-3">
-        <span>
-          
-        </span>
-        <span>
-          
-            <a class="group flex text-right" href="/cpp/6/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >静态成员-友元函数-类的组合</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2024-05-09 00:17:13 &#43;0000 UTC">9 May 2024</time>
-                  
-                </span>
-              </span>
-              <span
-                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-                ><span class="ltr:inline rtl:hidden">&rarr;</span
-                ><span class="ltr:hidden rtl:inline">&larr;</span></span
-              >
-            </a>
-          
-        </span>
-      </div>
-    </div>
   
 
 

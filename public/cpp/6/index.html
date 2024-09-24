@@ -17,8 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="rgb(255,255,255)" />
   
-  <title>CPP特点-输出长度与精度控制-指针与常量 &middot; House of Eternity</title>
-    <meta name="title" content="CPP特点-输出长度与精度控制-指针与常量 &middot; House of Eternity" />
+  <title>静态成员-友元函数-类的组合 &middot; House of Eternity</title>
+    <meta name="title" content="静态成员-友元函数-类的组合 &middot; House of Eternity" />
   
   
   
@@ -71,13 +71,15 @@
   <meta
     name="description"
     content="
-      2024年cpp课堂学习笔记
+      
+        
+      
     "
   />
   
   
   
-  <link rel="canonical" href="http://localhost:1313/cpp/cpp%E7%89%B9%E7%82%B9-%E8%BE%93%E5%87%BA%E9%95%BF%E5%BA%A6%E4%B8%8E%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6-%E6%8C%87%E9%92%88%E4%B8%8E%E5%B8%B8%E9%87%8F/" />
+  <link rel="canonical" href="http://localhost:1313/cpp/6/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -92,21 +94,19 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/cpp/cpp%E7%89%B9%E7%82%B9-%E8%BE%93%E5%87%BA%E9%95%BF%E5%BA%A6%E4%B8%8E%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6-%E6%8C%87%E9%92%88%E4%B8%8E%E5%B8%B8%E9%87%8F/">
+  <meta property="og:url" content="http://localhost:1313/cpp/6/">
   <meta property="og:site_name" content="House of Eternity">
-  <meta property="og:title" content="CPP特点-输出长度与精度控制-指针与常量">
-  <meta property="og:description" content="2024年cpp课堂学习笔记">
+  <meta property="og:title" content="静态成员-友元函数-类的组合">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="cpp">
-    <meta property="article:published_time" content="2024-03-28T19:50:14+08:00">
-    <meta property="article:modified_time" content="2024-03-28T19:50:14+08:00">
+    <meta property="article:published_time" content="2024-05-09T00:17:13+00:00">
+    <meta property="article:modified_time" content="2024-05-09T00:17:13+00:00">
     <meta property="article:tag" content="CPP">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="CPP特点-输出长度与精度控制-指针与常量">
-  <meta name="twitter:description" content="2024年cpp课堂学习笔记">
+  <meta name="twitter:title" content="静态成员-友元函数-类的组合">
 
   
   <script type="application/ld+json">
@@ -114,26 +114,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "CPPs",
-    "name": "CPP特点-输出长度与精度控制-指针与常量",
-    "headline": "CPP特点-输出长度与精度控制-指针与常量",
-    "description": "2024年cpp课堂学习笔记",
+    "name": "静态成员-友元函数-类的组合",
+    "headline": "静态成员-友元函数-类的组合",
+    
     
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/cpp\/cpp%E7%89%B9%E7%82%B9-%E8%BE%93%E5%87%BA%E9%95%BF%E5%BA%A6%E4%B8%8E%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6-%E6%8C%87%E9%92%88%E4%B8%8E%E5%B8%B8%E9%87%8F\/",
+    "url" : "http:\/\/localhost:1313\/cpp\/6\/",
     "author" : {
       "@type": "Person",
       "name": "Emiya-Omega"
     },
     "copyrightYear": "2024",
-    "dateCreated": "2024-03-28T19:50:14\u002b08:00",
-    "datePublished": "2024-03-28T19:50:14\u002b08:00",
+    "dateCreated": "2024-05-09T00:17:13\u002b00:00",
+    "datePublished": "2024-05-09T00:17:13\u002b00:00",
     
-    "dateModified": "2024-03-28T19:50:14\u002b08:00",
+    "dateModified": "2024-05-09T00:17:13\u002b00:00",
     
     "keywords": ["CPP"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "62"
+    "wordCount": "175"
   }
   </script>
 
@@ -348,8 +348,8 @@
   <li class="hidden inline">
     <a
       class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
-      href="/cpp/cpp%E7%89%B9%E7%82%B9-%E8%BE%93%E5%87%BA%E9%95%BF%E5%BA%A6%E4%B8%8E%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6-%E6%8C%87%E9%92%88%E4%B8%8E%E5%B8%B8%E9%87%8F/"
-      >CPP特点-输出长度与精度控制-指针与常量</a
+      href="/cpp/6/"
+      >静态成员-友元函数-类的组合</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -358,7 +358,7 @@
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        CPP特点-输出长度与精度控制-指针与常量
+        静态成员-友元函数-类的组合
       </h1>
       
         <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
@@ -394,7 +394,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-03-28 19:50:14 &#43;0800 CST">28 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span>62 words</span>
+      <time datetime="2024-05-09 00:17:13 &#43;0000 UTC">9 May 2024</time><span class="px-2 text-primary-500">&middot;</span><span>175 words</span>
     
 
     
@@ -446,26 +446,28 @@
   <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#面向对象语言特点">面向对象语言特点</a>
+    <li><a href="#静态数据成员">静态数据成员</a>
       <ul>
-        <li>
-          <ul>
-            <li><a href="#cpp向下兼容c语言">cpp向下兼容c语言</a></li>
-            <li><a href="#cpp中不允许嵌套使用">cpp中不允许/**/嵌套使用</a></li>
-            <li><a href="#cout_line_"><code>cout&lt;&lt;_LINE_&lt;&lt;~~;</code></a></li>
-            <li><a href="#通常只有规模很小一般为15条语句而频繁使用函数才定义为内联函数">通常只有规模很小(一般为1~5条语句)而频繁使用函数才定义为内联函数</a></li>
-          </ul>
-        </li>
-        <li><a href="#输出长度与精度控制">输出长度与精度控制</a>
-          <ul>
-            <li><a href="#cpp中函数可以重载只要函数参数的类型不同or参数的个数不同或者二者兼而有之两个or两个以上的函数可以使用相同的函数名">cpp中函数可以重载.只要函数参数的类型不同,or参数的个数不同,或者二者兼而有之,两个or两个以上的函数可以使用相同的函数名</a></li>
-            <li><a href="#指向常量的指针">指向常量的指针</a></li>
-            <li><a href="#指向字符串的常指针">指向字符串的常指针</a></li>
-            <li><a href="#指向常量的常指针">指向常量的常指针</a></li>
-          </ul>
-        </li>
+        <li><a href="#说明">说明</a></li>
       </ul>
     </li>
+    <li><a href="#静态成员函数">静态成员函数</a>
+      <ul>
+        <li><a href="#说明-1">说明</a></li>
+      </ul>
+    </li>
+    <li><a href="#友元">友元</a>
+      <ul>
+        <li><a href="#友元函数">友元函数</a>
+          <ul>
+            <li><a href="#说明-2">说明</a></li>
+            <li><a href="#将成员函数声明为友元函数">将成员函数声明为友元函数</a></li>
+          </ul>
+        </li>
+        <li><a href="#友元类">友元类</a></li>
+      </ul>
+    </li>
+    <li><a href="#类的组合">类的组合</a></li>
   </ul>
 </nav>
   </div>
@@ -475,45 +477,144 @@
         </div>
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        <h2 id="面向对象语言特点" class="relative group">面向对象语言特点 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e8%af%ad%e8%a8%80%e7%89%b9%e7%82%b9" aria-label="Anchor">#</a></span></h2><ul>
-<li>抽象</li>
+        <h1 id="静态成员" class="relative group">静态成员 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e9%9d%99%e6%80%81%e6%88%90%e5%91%98" aria-label="Anchor">#</a></span></h1><h2 id="静态数据成员" class="relative group">静态数据成员 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e9%9d%99%e6%80%81%e6%95%b0%e6%8d%ae%e6%88%90%e5%91%98" aria-label="Anchor">#</a></span></h2><ul>
+<li>在一个类中,若将一个数据成员说明为static，这种成员称为静态数据成员。</li>
+<li>与一般的数据成员不同，无论建立多少个类的对象，都只有一个静态数据的拷贝。从而实现了同一个类的不同对象之间的数据共享。</li>
 </ul>
-<ol>
-<li>类 -&gt; 抽象</li>
-<li>对象 -&gt; 具体</li>
+<blockquote>
+<p>定义静态数据成员的格式如下:
+static 数据类型 数据成员名;</p>
+</blockquote>
+<h3 id="说明" class="relative group">说明 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e8%af%b4%e6%98%8e" aria-label="Anchor">#</a></span></h3><ol>
+<li>静态数据成员的定义要加上关键字static ；</li>
+<li>静态数据成员的初始化应在类声明之后， 定义对象之前，在类外单独进行。初始化格式为:</li>
 </ol>
+<blockquote>
+<p>数据类型 类名::静态数据成员名 = 初始值</p>
+</blockquote>
+<ol start="3">
+<li>静态数据成员属于类，而不像普通数据成员那样属于某一对象。因此可以使用以下方式访问静态数据成员:</li>
+</ol>
+<blockquote>
+<p>类名::静态数据成员名
+如上例中的: Student::count和Student::sum</p>
+</blockquote>
+<ol start="4">
+<li>静态数据成员与静态变量一样, 在编译时创建并初始化。 它在该类的任何对象被建立之前就存在。因此, 公有的静态数据成员可以在对象定义之前被访问。对象定义后，也可以通过对象访问公有的静态数据成员，访问格式为:</li>
+</ol>
+<blockquote>
+<p>对象名.静态数据成员名
+对象指针-&gt;静态数据成员名</p>
+</blockquote>
+<ol start="5">
+<li>私有静态数据成员不能被类外部函数访问, 也不能用对象进行访问。</li>
+<li>C++支持静态数据成员的一个主要原因是可以不必使用全局变量。依赖于全局变量的类几乎都是违反面向对象程序设计的封装原理。</li>
+</ol>
+<h2 id="静态成员函数" class="relative group">静态成员函数 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e9%9d%99%e6%80%81%e6%88%90%e5%91%98%e5%87%bd%e6%95%b0" aria-label="Anchor">#</a></span></h2><ul>
+<li>静态成员函数属于整个类, 是该类所有成员共享的成员函数。定义静态成员函数的格式如下:</li>
+</ul>
+<blockquote>
+<p>static 返回类型 静态成员函数名（参数表）;</p>
+</blockquote>
 <ul>
-<li>封装</li>
+<li>与静态数据成员类似,调用公有静态成员函数的一般格式有如下几种:</li>
+</ul>
+<blockquote>
+<p>类名::静态成员函数名(实参表)
+对象. 静态成员函数名(实参表)
+对象指针-&gt;静态成员函数名(实参表)</p>
+</blockquote>
+<h3 id="说明-1" class="relative group">说明 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e8%af%b4%e6%98%8e-1" aria-label="Anchor">#</a></span></h3><ol>
+<li>一般情况下，静态成员函数主要用来访问<strong>全局变量</strong>or同一类中的静态数据成员</li>
+<li><strong>私有</strong><em>静态成员函数</em>不能被类外部函数和<em>对象</em>访问</li>
+<li>静态成员函数可在建立任何对象之前处理静态数据成员，普通成员函数则不能</li>
+<li>编译系统将静态成员函数限定为内部连接，也就是与现行文件相连接的其它文件中的同名函数不会与该函数冲突（因编译器而异）</li>
+<li>在一般的成员函数中都隐含一个this指针, 用来指向对象本身, 而静态成员函数则没有this指针</li>
+<li>静态成员函数一般不访问类中的非静态成员。若确实需要，静态成员函数只能通过对象名(或指向对象的指针)访问非静态成员</li>
+</ol>
+<pre tabindex="0"><code>cout &lt;&lt; “一只小猫的重量是：” &lt;&lt; weight &lt;&lt; “千克\n”;
+		//不合法，weight是非静态数据成员
+cout &lt;&lt; “小猫的总重量是” &lt;&lt; total_weight &lt;&lt; “千克” &lt;&lt; endl;
+		//合法，total_weight是静态数据成员
+</code></pre><blockquote>
+<p>若需要访问非静态数据成员，则只能通过对象名。
+如：把display函数定义为静态成员函数时，可将对象的引用作为函数参数，将它定义为：
+static void display (Small_cat &amp;w)
+cout &laquo; “这只小猫的重量是：” &laquo; w.weight &laquo; “千克\n”;</p>
+</blockquote>
+<h2 id="友元" class="relative group">友元 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e5%8f%8b%e5%85%83" aria-label="Anchor">#</a></span></h2><h3 id="友元函数" class="relative group">友元函数 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e5%8f%8b%e5%85%83%e5%87%bd%e6%95%b0" aria-label="Anchor">#</a></span></h3><ul>
+<li>将非成员函数声明为友元函数</li>
+</ul>
+<blockquote>
+<p>友元函数不是当前类的成员函数, 而是独立于当前类的外部函数, 但它可以访问该类的所有对象的成员, 包括私有成员、保护成员和公有成员。</p>
+</blockquote>
+<h4 id="说明-2" class="relative group">说明 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e8%af%b4%e6%98%8e-2" aria-label="Anchor">#</a></span></h4><ol>
+<li>
+<p>友元函数不是成员函数, 在类外部定义友元函数时不必在函数名前加上“类名::”。</p>
+</li>
+<li>
+<p>友元函数不是类的成员，它需通过作为入口参数传递进来的对象名去访问引用该对象的数据成员。</p>
+</li>
+</ol>
+<pre tabindex="0"><code>cout &lt;&lt; “女孩的姓名是：” &lt;&lt; x.name;
+		//合法
+cout &lt;&lt; “女孩的姓名是：” &lt;&lt; name;
+		//不合法
+</code></pre><ol start="3">
+<li>当一个函数需要访问多个类时，友元函数就显得非常重要。</li>
+<li>使用友元函数虽然提高了效率， 但与面向对象的程序设计思想相背，应当谨慎使用。</li>
+</ol>
+<h4 id="将成员函数声明为友元函数" class="relative group">将成员函数声明为友元函数 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e5%b0%86%e6%88%90%e5%91%98%e5%87%bd%e6%95%b0%e5%a3%b0%e6%98%8e%e4%b8%ba%e5%8f%8b%e5%85%83%e5%87%bd%e6%95%b0" aria-label="Anchor">#</a></span></h4><ul>
+<li>一个类的成员函数也可以作为另一个类的友元，这种成员函数不仅可以访问自己所在类对象中的所有成员, 还可以访问friend声明语句所在类对象中的所有成员。这样能使两个类相互合作、协调工作,完成某一任务。</li>
+</ul>
+<h3 id="友元类" class="relative group">友元类 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e5%8f%8b%e5%85%83%e7%b1%bb" aria-label="Anchor">#</a></span></h3><ul>
+<li>一个类作为另一个类的友元</li>
 </ul>
 <ol>
-<li>成员变量(私)</li>
-<li>成员函数(公)</li>
+<li>格式</li>
 </ol>
+<blockquote>
+<p>friend　类名；</p>
+</blockquote>
+<pre tabindex="0"><code>class Y{
+    .....
+};
+class X{
+    .....
+    friend Y;
+    .....
+};
+</code></pre><ol start="2">
+<li>当类Y被说明为类X的友元时，类Y的所有成员函数都成为类X的友元函数。这就意味着：作为友元类Y中的所有成员函数都可以访问类X中的所有成员（包括私有成员）。</li>
+<li>友元关系是单向的，不具备交换性</li>
+<li>友元关系不具有传递性</li>
+</ol>
+<h2 id="类的组合" class="relative group">类的组合 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%b1%bb%e7%9a%84%e7%bb%84%e5%90%88" aria-label="Anchor">#</a></span></h2><ol>
+<li>如有以下的组合类:</li>
+</ol>
+<pre tabindex="0"><code>    class  X{
+        类名1   对象成员名1;
+        类名2   对象成员名2;
+           …
+        类名n   对象成员名n;
+    };
+</code></pre><p>则类X的构造函数的定义形式为;</p>
+<pre tabindex="0"><code>X::X(对象成员所需的形参，本类成员形参):
+   对象成员名1(形参表1),…,对象成员名n(形参表n)
+{
+   // …构造函数体
+} 
+</code></pre><ol start="2">
+<li>如有以下的组合类</li>
+</ol>
+<blockquote>
+<p>Student::Student(string  name1, string stu_no1, float s1, float s2, float s3): score1(s1, s2, s3)</p>
+</blockquote>
 <ul>
-<li>继承</li>
-<li>多态</li>
+<li>构造函数调用顺序</li>
+<li>先调用<em>内嵌对象</em>的构造函数（按内嵌时的声明顺序，先声明者先构造）。然后调用本类的构造函数。（析构函数的调用顺序相反）</li>
+<li>对上面的代码段而言：先调用<strong>对象成员score1</strong>的构造函数，再执行<strong>类Student</strong>的构造函数</li>
 </ul>
-<h4 id="cpp向下兼容c语言" class="relative group">cpp向下兼容c语言 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cpp%e5%90%91%e4%b8%8b%e5%85%bc%e5%ae%b9c%e8%af%ad%e8%a8%80" aria-label="Anchor">#</a></span></h4><h4 id="cpp中不允许嵌套使用" class="relative group">cpp中不允许/**/嵌套使用 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cpp%e4%b8%ad%e4%b8%8d%e5%85%81%e8%ae%b8%e5%b5%8c%e5%a5%97%e4%bd%bf%e7%94%a8" aria-label="Anchor">#</a></span></h4><h4 id="cout_line_" class="relative group"><code>cout&lt;&lt;_LINE_&lt;&lt;~~;</code> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cout_line_" aria-label="Anchor">#</a></span></h4><ul>
-<li>显示该语句位于源程序第几行</li>
-</ul>
-<h4 id="通常只有规模很小一般为15条语句而频繁使用函数才定义为内联函数" class="relative group">通常只有规模很小(一般为1~5条语句)而频繁使用函数才定义为内联函数 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e9%80%9a%e5%b8%b8%e5%8f%aa%e6%9c%89%e8%a7%84%e6%a8%a1%e5%be%88%e5%b0%8f%e4%b8%80%e8%88%ac%e4%b8%ba15%e6%9d%a1%e8%af%ad%e5%8f%a5%e8%80%8c%e9%a2%91%e7%b9%81%e4%bd%bf%e7%94%a8%e5%87%bd%e6%95%b0%e6%89%8d%e5%ae%9a%e4%b9%89%e4%b8%ba%e5%86%85%e8%81%94%e5%87%bd%e6%95%b0" aria-label="Anchor">#</a></span></h4><h3 id="输出长度与精度控制" class="relative group">输出长度与精度控制 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e8%be%93%e5%87%ba%e9%95%bf%e5%ba%a6%e4%b8%8e%e7%b2%be%e5%ba%a6%e6%8e%a7%e5%88%b6" aria-label="Anchor">#</a></span></h3><pre tabindex="0"><code>#include &lt;iomainip&gt; //std::setw
-cout&lt;&lt;setw(10);限制输出长度为10
-cout&lt;&lt;setprecision(5)&lt;&lt;~;//限制输出精度
-cout&lt;&lt;fixed;//用定点数表示法表示浮点数
-</code></pre><h4 id="cpp中函数可以重载只要函数参数的类型不同or参数的个数不同或者二者兼而有之两个or两个以上的函数可以使用相同的函数名" class="relative group">cpp中函数可以重载.只要函数参数的类型不同,or参数的个数不同,或者二者兼而有之,两个or两个以上的函数可以使用相同的函数名 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cpp%e4%b8%ad%e5%87%bd%e6%95%b0%e5%8f%af%e4%bb%a5%e9%87%8d%e8%bd%bd%e5%8f%aa%e8%a6%81%e5%87%bd%e6%95%b0%e5%8f%82%e6%95%b0%e7%9a%84%e7%b1%bb%e5%9e%8b%e4%b8%8d%e5%90%8cor%e5%8f%82%e6%95%b0%e7%9a%84%e4%b8%aa%e6%95%b0%e4%b8%8d%e5%90%8c%e6%88%96%e8%80%85%e4%ba%8c%e8%80%85%e5%85%bc%e8%80%8c%e6%9c%89%e4%b9%8b%e4%b8%a4%e4%b8%aaor%e4%b8%a4%e4%b8%aa%e4%bb%a5%e4%b8%8a%e7%9a%84%e5%87%bd%e6%95%b0%e5%8f%af%e4%bb%a5%e4%bd%bf%e7%94%a8%e7%9b%b8%e5%90%8c%e7%9a%84%e5%87%bd%e6%95%b0%e5%90%8d" aria-label="Anchor">#</a></span></h4><h4 id="指向常量的指针" class="relative group">指向常量的指针 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%8c%87%e5%90%91%e5%b8%b8%e9%87%8f%e7%9a%84%e6%8c%87%e9%92%88" aria-label="Anchor">#</a></span></h4><p><code>const char *name =&quot;chen&quot;;</code></p>
-<ol>
-<li>*name 是常量(name不允许改变)
-<code>name[3]='a' ;</code> is ERROR</li>
-<li>name是指向常量的指针变量(指针name本身可以改变)
-<code>name =&quot;zhang&quot;;</code> is RIGHT</li>
-</ol>
-<h4 id="指向字符串的常指针" class="relative group">指向字符串的常指针 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%8c%87%e5%90%91%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%9a%84%e5%b8%b8%e6%8c%87%e9%92%88" aria-label="Anchor">#</a></span></h4><p><code>char* const name =&quot;chen&quot;;</code></p>
-<ol>
-<li>name是常量(name不允许改变)</li>
-<li>指针的地址不允许改变
-<code>name = &quot;zhang&quot;</code> is ERROR</li>
-</ol>
-<h4 id="指向常量的常指针" class="relative group">指向常量的常指针 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%8c%87%e5%90%91%e5%b8%b8%e9%87%8f%e7%9a%84%e5%b8%b8%e6%8c%87%e9%92%88" aria-label="Anchor">#</a></span></h4><p><code>const char* const name =&quot;chen&quot;;</code></p>
 
       </div>
     </section>
@@ -618,18 +719,37 @@ cout&lt;&lt;fixed;//用定点数表示法表示浮点数
       <div class="flex justify-between pt-3">
         <span>
           
-        </span>
-        <span>
-          
-            <a class="group flex text-right" href="/cpp/6/">
+            <a class="group flex" href="/cpp/cpp%E7%89%B9%E7%82%B9-%E8%BE%93%E5%87%BA%E9%95%BF%E5%BA%A6%E4%B8%8E%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6-%E6%8C%87%E9%92%88%E4%B8%8E%E5%B8%B8%E9%87%8F/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >静态成员-友元函数-类的组合</span
+                  >CPP特点-输出长度与精度控制-指针与常量</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2024-05-09 00:17:13 &#43;0000 UTC">9 May 2024</time>
+                    <time datetime="2024-03-28 19:50:14 &#43;0800 CST">28 March 2024</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="/cpp/5/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >string类-向函数传递对象-对象赋值语句-拷贝构造函数</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-04-24 02:17:46 &#43;0000 UTC">24 April 2024</time>
                   
                 </span>
               </span>
