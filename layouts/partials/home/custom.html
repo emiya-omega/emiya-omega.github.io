@@ -36,3 +36,25 @@
   <section>
     {{ partial "live2d.html" . }}
   </section>
+  <style>
+  :root {
+    --sys-font-family: "Nunito";
+    --zh-font-family: "Noto Serif SC";
+    --base-font-family: "Nunito";
+    --code-font-family: "Bebas Neue";
+    --article-font-family: "Nunito";
+  }
+</style>
+
+<script>
+  (function () {
+    const customFont = document.createElement("link");
+    customFont.href =
+      "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+
+    customFont.type = "text/css";
+    customFont.rel = "stylesheet";
+
+    document.head.appendChild(customFont);
+  })();
+</script>
