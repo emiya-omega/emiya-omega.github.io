@@ -1,9 +1,9 @@
 ---
 title : '前缀函数与Kmp算法（copy from oi wiki）'
-date : 2024-10-21T08:52:59Z
+date : 2024-10-21T20:52:59Z
 tags: ["DS"]
 categories: ["学习笔记"]
-draft : false
+
 ---
 
 ## 前缀函数
@@ -59,7 +59,7 @@ $\pi[6]=0$，因为 `abcabcd` 无相等的真前缀和真后缀
 -   如果 $j = 0$ 并且仍没有任何一次匹配，则置 $\pi[i] = 0$ 并移至下一个下标 $i + 1$。
 -   具体实现如下：
 
-     ```cpp
+        ```cpp
         // 注：
         // string substr (size_t pos = 0, size_t len = npos) const;
         vector<int> prefix_function(string s) {
@@ -73,10 +73,10 @@ $\pi[6]=0$，因为 `abcabcd` 无相等的真前缀和真后缀
               }
           return pi;
         }
-     ```
+        ```
     
  
-    ```python
+        ```python
         def prefix_function(s):
             n = len(s)
             pi = [0] * n
@@ -86,10 +86,10 @@ $\pi[6]=0$，因为 `abcabcd` 无相等的真前缀和真后缀
                         pi[i] = j
                         break
             return pi
-     ```
+        ```
     
 
-     ```java
+        ```java
         static int[] prefix_function(String s) {
             int n = s.length();
             int[] pi = new int[n];
@@ -103,7 +103,8 @@ $\pi[6]=0$，因为 `abcabcd` 无相等的真前缀和真后缀
             }
             return pi;
         }
-    ```
+        ```
+
 显见该算法的时间复杂度为 $O(n^3)$，具有很大的改进空间。
 
 ## 计算前缀函数的高效算法
@@ -204,9 +205,8 @@ $$
 
 而且该算法的实现出人意料的短且直观：
 
- ```cpp
 
-
+        ```cpp
         vector<int> prefix_function(string s) {
           int n = (int)s.length();
           vector<int> pi(n);
@@ -218,10 +218,9 @@ $$
           }
           return pi;
         }
+        ```
 
- ```
-
- ```python
+        ```python
         def prefix_function(s):
             n = len(s)
             pi = [0] * n
@@ -233,10 +232,10 @@ $$
                     j += 1
                 pi[i] = j
             return pi
- ```
+        ```
     
 
-```java
+        ```java
         static int[] prefix_function(String s) {
             int n = s.length();
             int[] pi = new int[n];
@@ -252,7 +251,7 @@ $$
             }
             return pi;
         }
- ```
+        ```
 
 这是一个 **在线** 算法，即其当数据到达时处理它——举例来说，你可以一个字符一个字符的读取字符串，立即处理它们以计算出每个字符的前缀函数值。该算法仍然需要存储字符串本身以及先前计算过的前缀函数值，但如果我们已经预先知道该字符串前缀函数的最大可能取值 $M$，那么我们仅需要存储该字符串的前 $M + 1$ 个字符以及对应的前缀函数值。
 
@@ -278,7 +277,7 @@ $$
 
 因此 Knuth–Morris–Pratt 算法（简称 KMP 算法）用 $O(n + m)$ 的时间以及 $O(n)$ 的内存解决了该问题。
 
- ```cpp
+        ```cpp
         vector<int> find_occurrences(string text, string pattern) {
           string cur = pattern + '#' + text;
           int sz1 = text.size(), sz2 = pattern.size();
@@ -289,10 +288,10 @@ $$
           }
           return v;
         }
- ```
+        ```
     
 
-```python
+        ```python
         def find_occurrences(t, s):
             cur = s + "#" + t
             sz1, sz2 = len(t), len(s)
@@ -302,10 +301,10 @@ $$
                 if lps[i] == sz2:
                     ret.append(i - 2 * sz2)
             return ret
-```
+        ```
     
 
- ```java
+        ```java
         static List<Integer> find_occurrences(String text, String pattern) {
             String cur = pattern + '#' + text;
             int sz1 = text.length(), sz2 = pattern.length();
@@ -318,7 +317,7 @@ $$
             }
             return v;
         }
- ```
+        ```
 
 ### 字符串的周期
 
