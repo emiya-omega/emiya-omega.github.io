@@ -46,6 +46,21 @@
   }
 </style>
 
+<head>
+  ...
+
+  <!-- LaTeX  MathJax 3 -->
+  {{ if .Params.mathjax }}{{ partial "mathjax_support.html" . }}{{ end }}
+</head>
+<style>
+  code.has-jax {
+    -webkit-font-smoothing: antialiased;
+    background: inherit !important;
+    border: none !important;
+    font-size: 100%;
+  }
+</style>
+
 <script>
   (function () {
     const customFont = document.createElement("link");

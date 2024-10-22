@@ -22,4 +22,16 @@ links = [
 
 [params]
   mainSections =['posts' , 'CPP' , 'DS' ]
+
+[markup]
+[markup.goldmark.extensions.passthrough]
+      enable = true
+      delimiters.block = [
+        ["\\[", "\\]"],
+        ["$$", "$$"]
+      ]
+      delimiters.inline = [
+        ["\\(", "\\)"],
+        ["$", "$"]
+      ]
   
